@@ -36,7 +36,7 @@
 		window.addEventListener('DOMContentLoaded', () => {
 			const heroBackground1 = document.getElementById('hero-background-1');
 			const heroBackground2 = document.getElementById('hero-background-2');
-			const images = ["Imagenes/hero1.webp", "Imagenes/hero2.webp", "Imagenes/hero3.webp"];
+			const images = ["hero1.webp", "hero2.webp", "hero3.webp"];
 
 			// Iniciar el carrusel solo si la ventana es mayor que 768px
 			changeBackgroundImage(heroBackground1, heroBackground2, images, 0);
@@ -665,11 +665,11 @@
 
 		@media only screen and (max-width: 600px) {
 			#imagen-fondo-productos {
-				content: url('Imagenes/fondo_productos_celular.webp');
+				content: url('fondo_productos_celular.webp');
 			}
 
 			#imagen-fondo-acerca-de {
-				content: url('Imagenes/acerca_de_fondo_celular.webp');
+				content: url('acerca_de_fondo_celular.webp');
 			}
 		}
 
@@ -707,7 +707,7 @@
 <div class="py-0 front-elements">
 <div class="flex justify-center">
 <div class="md:mt--2 flex justify-center items-center bg-white rounded drop-shadow-xl h-full w-8/12 h-full md:w-2/4 bg-opacity-0" data-aos="fade-down" id="card-logo">
-<img alt="logo" class="aos-init aos-animate w-8/12 h-full md:w-2/4" data-aos="fade-up" fetchpriority="high" id="logo-image" src="Imagenes/logo.webp"/>
+<img alt="logo" class="aos-init aos-animate w-8/12 h-full md:w-2/4" data-aos="fade-up" fetchpriority="high" id="logo-image" src="logo.webp"/>
 </div>
 </div>
 <h1 class="text-5xl md:text-6xl text-center font-bold drop-shadow-xl" data-aos="fade-up" id="nombre-empresa">Aristeel SA de CV</h1>
@@ -758,7 +758,7 @@
 <!-- Seccion Oferta -->
 <section id="seccion-oferta">
 <div class="flex-col overflow-hidden relative flex min-h-[420px] items-center px-5">
-<img class="absolute z-[-1] h-full w-full object-cover object-center inset-0" id="imagen-oferta" loading="lazy" src="Imagenes/oferta_fondo.webp"/>
+<img class="absolute z-[-1] h-full w-full object-cover object-center inset-0" id="imagen-oferta" loading="lazy" src="oferta_fondo.webp"/>
 <section class="relative w-full max-w-[1280px] mt-28 mb-24 max-md:max-w-full max-md:my-10">
 <div class="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
 <article class="flex flex-col items-stretch max-md:w-full max-md:ml-0">
@@ -782,7 +782,7 @@
 <!-- Sección 3 Tarjetas -->
 <section class="relative bg-gray-50 py-10" id="productos">
 <div class="absolute inset-0">
-<img class="object-cover h-full w-full" id="imagen-fondo-productos" src="Imagenes/fondo_productos_escritorio.webp"/>
+<img class="object-cover h-full w-full" id="imagen-fondo-productos" src="fondo_productos_escritorio.webp"/>
 </div>
 <!-- <h1 class="text-4xl md:text-6xl drop-shadow-2xl font-bold text-center text-gray-50 capitalize drop-shadow-xl" data-aos="fade-down" data-aos-delay="0">
 			<span id="titulo-productos" class="text-transparent bg-clip-text bg-gradient-to-t to-gray-50 from-slate-300">Integración con Whatsapp</span></h1>
@@ -793,17 +793,17 @@
 <div class="grid grid-cols-1 gap-4 md:gap-0 md:grid-cols-2 xl:grid-cols-3">
 <div class="glass flex flex-col items-center m-2 md:m-8 space-y-3 text-center hover:shadow-lg hover:shadow-black/30" data-aos="fade-up" data-aos-delay="1000" id="card-1">
 <h1 class="font-bold capitalize py-1 h-20 text-white hover:text-black text-2xl md:text-3xl" id="nombre-producto-1">Invernaderos y Estructuras de Acero</h1>
-<img alt="product 1" class="w-100 p-2 rounded-xl mt-5 hover:scale-100" id="imagen-producto" src="Imagenes/productos1.webp"/>
+<img alt="product 1" class="w-100 p-2 rounded-xl mt-5 hover:scale-100" id="imagen-producto" src="productos1.webp"/>
 <p class="text-white hover:text-black" id="product-description-1">Diseñamos y construimos invernaderos que se adaptan perfectamente a tus necesidades específicas.</p>
 </div>
 <div class="glass flex flex-col items-center m-2 md:m-8 space-y-3 text-center hover:shadow-lg hover:shadow-black/30" data-aos="fade-up" data-aos-delay="2000" id="card-1">
 <h1 class="font-bold capitalize py-1 h-20 text-white hover:text-black text-2xl md:text-3xl" id="nombre-producto-1">Accesorios de Invernadero</h1>
-<img alt="product 2" class="w-100 p-2 rounded-xl mt-5 hover:scale-100" id="imagen-producto" src="Imagenes/productos2.webp"/>
+<img alt="product 2" class="w-100 p-2 rounded-xl mt-5 hover:scale-100" id="imagen-producto" src="productos2.webp"/>
 <p class="text-white hover:text-black" id="product-description-1">Encuentra todo lo que necesitas para tu invernadero, desde sistemas de riego hasta control de clima.</p>
 </div>
 <div class="glass flex flex-col items-center m-2 md:m-8 space-y-3 text-center hover:shadow-lg hover:shadow-black/30" data-aos="fade-up" data-aos-delay="3000" id="card-1">
 <h1 class="font-bold capitalize py-1 h-20 text-white hover:text-black text-2xl md:text-3xl" id="nombre-producto-1">Sistemas de Riego</h1>
-<img alt="product 3" class="w-100 p-2 rounded-xl mt-5 hover:scale-100" id="imagen-producto" src="Imagenes/productos3.webp"/>
+<img alt="product 3" class="w-100 p-2 rounded-xl mt-5 hover:scale-100" id="imagen-producto" src="productos3.webp"/>
 <p class="text-white hover:text-black" id="product-description-1">Soluciones de riego eficientes y efectivas para asegurar la prosperidad de tus cultivos.</p>
 </div>
 </div>
@@ -824,7 +824,7 @@
 					</div> -->
 <div class="flex justify-center" data-aos="fade-up" data-aos-delay="1400">
 <!-- <img src="https://media-public.canva.com/MADQ43cICJk/1/screen.jpg" alt="Diferenciadores" class="w-3/4 h-auto object-cover rounded-lg"> -->
-<img alt="Diferenciadores" class="w-full md:w-full h-auto object-cover rounded-lg" id="diferenciadores-image" loading="lazy" src="Imagenes/diferenciadores.webp"/>
+<img alt="Diferenciadores" class="w-full md:w-full h-auto object-cover rounded-lg" id="diferenciadores-image" loading="lazy" src="diferenciadores.webp"/>
 </div>
 </div>
 <!-- Diferenciadores en bullets -->
@@ -861,7 +861,7 @@
 </section>
 <!-- Sección CTA -->
 <section class="mb-32">
-<div class="cta-background relative z-0 py-20 overflow-hidden bg-no-repeat bg-cover bg-center aos-init order-last" id="cta-imagen" style="background-image:url(Imagenes/cta.webp); height: 500px; background-position: center;">
+<div class="cta-background relative z-0 py-20 overflow-hidden bg-no-repeat bg-cover bg-center aos-init order-last" id="cta-imagen" style="background-image:url(cta.webp); height: 500px; background-position: center;">
 </div>
 <div class="relative z-30 container mx-auto px-6 md:px-10 md:pt-10 order-first">
 <div class="text-center text-gray-800">
@@ -911,7 +911,7 @@
 </div>
 <!-- Imagen a la derecha -->
 <div class="flex flex-col items-center w-[45%] ml-5 max-md:w-full max-md:ml-0 hover:scale-105" data-aos="fade-left" data-aos-delay="1000">
-<img class="aspect-[1.16] object-contain object-center w-3/4 overflow-hidden grow max-md:max-w-full max-md:mt-10" id="mas-info-img1" loading="lazy" src="Imagenes/mas_info_img1.webp"/>
+<img class="aspect-[1.16] object-contain object-center w-3/4 overflow-hidden grow max-md:max-w-full max-md:mt-10" id="mas-info-img1" loading="lazy" src="mas_info_img1.webp"/>
 </div>
 </div>
 </div>
@@ -920,7 +920,7 @@
 <div class="flex flex-col-reverse md:flex-row gap-5 max-md:items-stretch max-md:gap-0">
 <!-- Imagen a la izquierda para escritorio, abajo para móvil -->
 <div class="flex flex-col items-center w-[45%] mr-5 max-md:w-full max-md:mr-0 hover:scale-105" data-aos="fade-right" data-aos-delay="1000">
-<img class="aspect-[1.16] object-contain object-center w-3/4 overflow-hidden grow max-md:max-w-full max-md:mt-10" id="mas-info-img2" loading="lazy" src="Imagenes/mas_info_img2.webp"/>
+<img class="aspect-[1.16] object-contain object-center w-3/4 overflow-hidden grow max-md:max-w-full max-md:mt-10" id="mas-info-img2" loading="lazy" src="mas_info_img2.webp"/>
 </div>
 <!-- Texto -->
 <div class="flex flex-col items-stretch w-[49%] max-md:w-full max-md:ml-0">
@@ -991,7 +991,7 @@
 </div>
 <!-- Imagen a la derecha -->
 <div class="flex flex-col items-center w-[45%] ml-5 max-md:w-full max-md:ml-0 hover:scale-105" data-aos="fade-left" data-aos-delay="1000">
-<img class="aspect-[1.16] object-contain object-center w-3/4 overflow-hidden grow max-md:max-w-full max-md:mt-10" id="mas-info-img3" loading="lazy" src="Imagenes/mas_info_img3.webp"/>
+<img class="aspect-[1.16] object-contain object-center w-3/4 overflow-hidden grow max-md:max-w-full max-md:mt-10" id="mas-info-img3" loading="lazy" src="mas_info_img3.webp"/>
 </div>
 </div>
 </div>
@@ -1062,7 +1062,7 @@
 <!-- Sección Acerca de nosotros -->
 <section class="relative bg-gray-50 py-20" id="acerca-de">
 <div class="absolute inset-1">
-<img class="object-cover h-full w-full z-0" id="imagen-fondo-acerca-de" src="Imagenes/acerca_de_fondo_escritorio.webp">
+<img class="object-cover h-full w-full z-0" id="imagen-fondo-acerca-de" src="acerca_de_fondo_escritorio.webp">
 </img></div>
 <h1 class="text-3xl md:text-6xl pb-10 font-extrabold text-center text-white capitalize drop-shadow-xl" data-aos="fade-down" data-aos-delay="0" id="titulo-acercade">Acerca de Aristeel</h1>
 <div class="container mx-auto px-4">
