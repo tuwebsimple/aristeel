@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<!-- <hr class="my-12 mx-10 border-gray-200 dark:border-gray-700"> -->
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aristeel SA de CV</title>
+<link href="https://natureleadership.org/wp-content/uploads/2016/07/Logo_White_transparent.png" rel="icon"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Script Animación Hero - Imagenes de fondo -->
+<script id="imagenes-hero">
+		function changeBackgroundImage(element1, element2, images, index) {
+			if (index % 2 === 0) {
+				element1.style.backgroundImage = `url('${images[index]}')`;
+				element1.style.opacity = '1';
+				element2.style.opacity = '0';
+				element1.classList.add('zoom-out');
+				element2.classList.remove('zoom-out');
+			} else {
+				element2.style.backgroundImage = `url('${images[index]}')`;
+				element1.style.opacity = '0';
+				element2.style.opacity = '1';
+				element2.classList.add('zoom-out');
+				element1.classList.remove('zoom-out');
+			}
+			setTimeout(() => {
+				changeBackgroundImage(element1, element2, images, (index + 1) % images.length);
+			}, 5000);
+		}
+
+
+		window.addEventListener('DOMContentLoaded', () => {
+			const heroBackground1 = document.getElementById('hero-background-1');
+			const heroBackground2 = document.getElementById('hero-background-2');
+			const images = ["Imagenes/hero1.webp", "Imagenes/hero2.webp", "Imagenes/hero3.webp"];
+
+			// Iniciar el carrusel solo si la ventana es mayor que 768px
+			changeBackgroundImage(heroBackground1, heroBackground2, images, 0);
+
+		});
+
+	</script>
+<!-- Script Animación Nav Bar - Efecto Transparente-->
+<script>
+		window.addEventListener('DOMContentLoaded', (event) => {
+			const navbar = document.getElementById('navbar');
+			const logoText = document.getElementById('logo-text');
+			const button = document.getElementById('location-button');
+
+			window.addEventListener('scroll', () => {
+				if (window.scrollY > 10) {
+					navbar.classList.remove('bg-transparent', 'text-white');
+					navbar.classList.add('bg-white', 'text-gray-800');
+					// logoText.classList.remove('text-white');
+					// logoText.classList.add('text-gray-800');
+					// button.classList.remove('bg-white', 'text-gray-600');
+					// button.classList.add('bg-gray-600', 'text-white');
+				} else {
+					navbar.classList.remove('bg-white', 'text-gray-800');
+					navbar.classList.add('bg-transparent', 'text-white');
+					// logoText.classList.remove('text-gray-800');
+					// logoText.classList.add('text-white');
+					// button.classList.remove('bg-gray-600', 'text-white');
+					// button.classList.add('bg-white', 'text-gray-600');
+				}
+			});
+		});
+	</script>
+<!-- Estilos CSS  -->
+<style>
+		/* @keyframes zoom {
+			0% {
+				transform: scale(1);
+			}
+			100% {
+				transform: scale(1.4);
+			}
+		} */
+
+		.zoom-out {
+			animation: zoomout 2s;
+			transform-origin: top center;
+			/* Establece el origen de la transformación en la parte superior del centro */
+		}
+
+		@keyframes zoomout {
+			from {
+				transform: scale(1);
+			}
+
+			to {
+				transform: scale(1.5);
+				/* Puedes ajustar este valor según el nivel de zoom-out deseado */
+			}
+		}
+
+
+
+
+		html,
+		body {
+			max-width: 100%;
+			overflow-x: hidden;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			color: #6d7c90;
+			font-family: "Raleway", sans-serif;
+			font-size: 17px;
+			line-height: 1.75em;
+			/* padding: 0; */
+			text-align: left;
+		}
+
+
+		.hero {
+			background-size: cover;
+			background-position: center;
+			position: relative;
+			overflow: hidden;
+		}
+
+		/* trainsition con efecto en el nav bar */
+		.navbar-transition {
+			transition: background-color 0.6s ease-in-out, color 0.6s ease-in-out;
+		}
+
+		.carousel {
+			position: relative;
+		}
+
+		.carousel-inner {
+			position: relative;
+			width: 100%;
+			overflow: hidden;
+		}
+
+		.carousel-open:checked+.carousel-item {
+			position: static;
+			opacity: 1;
+			transition: opacity 0.4s ease;
+		}
+
+		.carousel-item {
+			position: absolute;
+			opacity: 0;
+			width: 100%;
+			transition: opacity 0.4s ease;
+			text-align: center;
+			white-space: nowrap;
+		}
+
+		.carousel-control {
+			background: rgba(0, 0, 0, 0.28);
+			width: 7%;
+			height: 100%;
+			z-index: 10;
+			cursor: pointer;
+			transition: all 0.1s ease;
+		}
+
+		.carousel-control:hover {
+			background: rgba(0, 0, 0, 0.5);
+			transition: all 0.1s ease;
+		}
+
+		.carousel-control.prev {
+			left: 0;
+		}
+
+		.carousel-control.next {
+			right: 0;
+		}
+
+		.carousel-control.prev:hover,
+		.carousel-control.next:hover {
+			color: #ffffff;
+			text-decoration: none;
+			opacity: 1;
+			filter: alpha(opacity=100);
+		}
+
+		.carousel-indicators {
+			list-style: none;
+			padding: 0;
+			position: absolute;
+			bottom: 2%;
+			left: 50%;
+			margin-left: -19px;
+			text-align: center;
+		}
+
+		.carousel-indicators li {
+			display: inline-block;
+			margin: 0 5px;
+		}
+
+		.carousel-bullet {
+			color: #333;
+			font-size: 20px;
+			cursor: pointer;
+			transition: color 0.1s ease;
+		}
+
+		.carousel-bullet:hover {
+			color: #666;
+			transition: color 0.1s ease;
+		}
+
+		.testimonial-text {
+			max-width: 60%;
+		}
+
+		@media (max-width: 768px) {
+			.carousel-item {
+				flex-direction: column;
+			}
+
+			.testimonial-text {
+				max-width: 100%;
+				margin-top: 1rem;
+			}
+		}
+
+		@keyframes slide {
+
+			0%,
+			33.33% {
+				opacity: 1;
+			}
+
+			33.34%,
+			100% {
+				opacity: 0;
+			}
+		}
+
+		.testimonial-container {
+			animation: slide 21s infinite;
+		}
+
+		.testimonial-container:nth-child(2) {
+			animation-delay: 7s;
+		}
+
+		.testimonial-container:nth-child(3) {
+			animation-delay: 14s;
+		}
+
+		.overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(52, 52, 52, 0.3);
+			/* ajusta esto a tu preferencia */
+			z-index: 1;
+			/* debe ser inferior al z-index de los elementos que quieres mantener al frente */
+		}
+
+		.front-elements {
+			position: relative;
+			z-index: 2;
+		}
+
+		#hero-background-1,
+		#hero-background-2 {
+			animation: zoom 30s infinite alternate ease-in-out;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			transition: opacity 2s ease-in-out;
+		}
+
+		/* Imagen de sección Acerca de misión vision y objetivos */
+		@media screen and (min-width: 640px) {
+			.bg-image {
+				background: url('https://cdn.discordapp.com/attachments/1114023780071768084/1122168384738566204/tuwebsimple444_Tech_business_building_shot_with_Nikon_D850_and__533bf0e1-243d-41b2-92cd-7dfaded09b8b.png') no-repeat center fixed;
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-o-background-size: cover;
+				background-size: cover;
+			}
+		}
+
+		@media screen and (max-width: 639px) {
+			.bg-image {
+				background: url('https://cdn.discordapp.com/attachments/1114023780071768084/1122168384738566204/tuwebsimple444_Tech_business_building_shot_with_Nikon_D850_and__533bf0e1-243d-41b2-92cd-7dfaded09b8b.png') no-repeat center top fixed;
+				-webkit-background-size: cover;
+				-moz-background-size: 100% auto;
+				-o-background-size: 100% auto;
+				background-size: cover;
+			}
+		}
+
+		.bg-img::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background-image: inherit;
+			background-size: cover;
+			background-position: bottom;
+			background-repeat: no-repeat;
+			transition: filter .3s;
+		}
+
+		.bg-img:hover::before {
+			filter: blur(5px);
+		}
+
+		.glass {
+			background: rgba(255, 255, 255, 0.15);
+			backdrop-filter: blur(30px);
+			border-radius: 10px;
+			padding: 15px;
+			border: .5px solid rgba(255, 255, 255, 0.18);
+			z-index: 30;
+		}
+
+		.glass-location {
+			position: absolute;
+			top: 20px;
+			/* Ajusta el valor según sea necesario */
+			left: 20px;
+			/* Ajusta el valor según sea necesario */
+			background: rgba(0, 0, 0, 0.2);
+			backdrop-filter: blur(20px);
+			padding: 20px;
+			border-radius: 10px;
+			border: .5px solid rgb(255, 255, 255);
+		}
+
+		.glass-descripcion {
+			background: rgba(255, 255, 255, 0.15);
+			backdrop-filter: blur(50px);
+			border-radius: 10px;
+			padding: 20px;
+			border: .5px solid rgba(0, 0, 0, 0.18);
+		}
+
+		.glass-productos {
+			background: rgba(255, 255, 255, 0.15);
+			backdrop-filter: blur(30px);
+			border-radius: 10px;
+			padding: 20px;
+			border: .5px solid rgba(255, 255, 255, 0.18);
+		}
+
+		.skew-left {
+			transform: rotateY(5deg) rotateX(1deg) skew(5deg, 1deg) scale(1.2) translateX(8%)
+		}
+
+		.skew-right {
+			transform: rotateY(-5deg) rotateX(1deg) skew(-5deg, 1deg) scale(1.2) translateX(-8%);
+		}
+
+
+		/* Estilo para desktop */
+		.skew-left-descripcion {
+			transform: rotateY(5deg) rotateX(1deg) skew(5deg, 1deg) scale(1.2) translateX(8%);
+		}
+		/* Estilo para móviles */
+		@media screen and (max-width: 640px) {
+			.skew-left-descripcion {
+				transform: rotateY(5deg) rotateX(1deg) skew(5deg, 1deg) scale(1.3) translateX(8%);
+			}
+		}
+
+
+		/* Ajusta la escala para las pantallas móviles */
+		@media (max-width: 480px) {
+			.skew-right {
+				transform: rotateY(-5deg) rotateX(1deg) skew(-5deg, 1deg) scale(0.9) translateX(-8%);
+			}
+
+		}
+
+		.perspective-right {
+			margin-bottom: 16%;
+			perspective: 600px;
+			perspective-origin: 100%
+		}
+
+		.perspective-right-insta-profile {
+			margin-bottom: 16%;
+			perspective: 800px;
+			perspective-origin: 100%
+		}
+
+		.skew-right-insta-profile {
+			transform: rotateY(-5deg) rotateX(1deg) skew(-1deg, 1deg) scale(1) translateX(-8%);
+		}
+
+		
+
+		.perspective-left {
+			margin-bottom: 10%;
+			margin-top: 5px;
+			margin-left: -30px; /* Reset para dispositivos pequeños */
+			perspective: 600px;
+			perspective-origin: -100%;
+			
+			
+		}
+
+		/* Media query para pantallas de escritorio en adelante */
+		@media (min-width: 768px) {
+			.perspective-left {
+				margin-left: 10px;
+				margin-bottom: 5px;
+			}
+		}
+
+
+
+		.perspective-left iframe {
+			border-radius: 10px;
+			/* Cambia este valor según el nivel de redondeo que desees */
+		}
+
+		.skew-left-post {
+			transform: rotateY(5deg) rotateX(1deg) skew(5deg, 1deg) scale(1.2) translateX(8%);
+		}
+
+		.perspective-left-post {
+			margin-bottom: 0%;
+			margin-right: 0%;
+			margin-left: 0%;
+			perspective: 600px;
+			perspective-origin: -100%
+		}
+
+		.perspective-left-post iframe {
+			border-radius: 15px;
+			/* Cambia este valor según el nivel de redondeo que desees */
+		}
+
+
+		.clean-card {
+			background-color: #fff;
+			box-shadow: 0 8px 60px 0 rgba(103, 151, 255, .11), 0 12px 90px 0 rgba(103, 151, 255, .11);
+			margin-top: 24px;
+			padding: 0;
+			transition: all .3s cubic-bezier(.4, 0, .2, 1);
+			border-radius: 8px;
+			flex-direction: row-reverse;
+			display: flex;
+			flex-wrap: wrap;
+			margin: 4% -2.5%;
+			max-width: 105%;
+			position: relative;
+			flex: 1;
+		}
+
+		.cta-background {
+			background-size: cover;
+		}
+
+		@media (min-width: 481px) {
+			.cta-background {
+				background-size: contain;
+			}
+		}
+
+		#productos {
+			position: relative;
+			overflow: hidden;
+			/* asegura que el desenfoque no afecte a otros elementos */
+		}
+
+		#productos::before {
+			content: "";
+			background-image: url('https://cdn.discordapp.com/attachments/1114023780071768084/1127036161739718737/tuwebsimple444_Abstract_gradient_gold_displaywhite_clean_backgr_e2de1dba-6299-4b56-8ebe-c77e30f5f756.png');
+			background-size: cover;
+			background-attachment: fixed;
+			filter: blur(10px);
+			position: absolute;
+			top: -10px;
+			/* compensación para el desenfoque */
+			bottom: -10px;
+			/* compensación para el desenfoque */
+			left: -10px;
+			/* compensación para el desenfoque */
+			right: -10px;
+			/* compensación para el desenfoque */
+			z-index: -1;
+		}
+
+		#card-1:hover #nombre-producto-1,
+		#card-1:hover #product-description-1 {
+			color: white;
+		}
+
+		#card-2:hover #nombre-producto-2,
+		#card-2:hover #product-description-2 {
+			color: white;
+		}
+
+		#card-3:hover #nombre-producto-3,
+		#card-3:hover #product-description-3 {
+			color: white;
+		}
+
+		/* Este será el estilo por defecto (móvil) */
+		#separador-1 {
+			background-attachment: scroll;
+		}
+
+		/* Cuando la pantalla tenga al menos 768px de ancho, se aplicará este estilo (escritorio) */
+		@media (min-width: 768px) {
+			#separador-1 {
+				background-attachment: fixed;
+			}
+
+			#separador-2 {
+				background-attachment: fixed;
+			}
+		}
+
+		#separador-2 {
+			background-attachment: scroll;
+		}
+
+
+		/* Por defecto, la posición del background será al centro */
+		#cta-imagen {
+			background-attachment: scroll;
+		}
+		
+		/* Cuando la pantalla tenga al menos 768px de ancho, la posición del background será el 300% */
+		@media (min-width: 768px) {
+			#cta-imagen {
+				background-position: 300%;
+				background-attachment:fixed;
+			}
+		}
+		
+		.floating-descripcion {
+			animation-name: floating-descripcion;
+			animation-duration: 12s;
+			animation-iteration-count: infinite;
+			animation-timing-function: ease-in-out;
+		}
+
+		@keyframes floating-descripcion {
+			0% {
+				transform: translate(0, -5px);
+			}
+
+			50% {
+				transform: translate(0, 5px);
+			}
+
+			100% {
+				transform: translate(0, -5px);
+			}
+		}
+		
+
+		.floating {
+			animation-name: floating;
+			animation-duration: 6s;
+			animation-iteration-count: infinite;
+			animation-timing-function: ease-in-out;
+		}
+
+		@keyframes floating {
+			0% {
+				transform: translate(0, 0px);
+			}
+
+			50% {
+				transform: translate(6px, 8px);
+			}
+
+			100% {
+				transform: translate(0, -3px);
+			}
+		}
+
+		/* Esconder el triangulo del acorden (Sección Instagram) */
+		details summary {
+		list-style: none;
+		}
+		details summary::-webkit-details-marker {
+		display: none;
+		}
+
+		.fa-chevron-up {
+			transition: transform 0.5s ease;
+		}
+
+		details[open] .fa-chevron-up {
+			transform: rotate(180deg);
+		}
+		
+		/* Estilo por defecto para dispositivos más pequeños como móviles */
+		#dynamicIframe {
+			width: 100%;
+			height: auto;
+			aspect-ratio: 16/9;  /* Ajusta si es necesario según la relación de aspecto de tu video */
+		}
+
+		/* Estilo para dispositivos más grandes, como desktops */
+		@media (min-width: 768px) {  /* Este es un punto de interrupción común para tablets y desktops */
+			#dynamicIframe {
+				width: 560px;  /* Ancho para desktop */
+				height: 316px;  /* Altura para desktop */
+			}
+		}
+
+		/* Media query para pantallas más grandes que un celular (por ejemplo, más de 600px) */
+		@media only screen and (min-width: 601px) {
+			.contenedor-principal-ubicacion {
+				width: 600px;
+				position: absolute;
+				top: 120px;
+				left: -10px;
+			}
+
+			.sub-contenedor-ubicacion {
+				/* Estilos para pantallas más grandes aquí (si es necesario) */
+				width: 500px;
+			}
+
+			.glass-location {
+				left: -50px;
+			}
+		}
+
+		/* Estilo para el modal */
+		#modal {
+			display: none; /* Inicialmente oculto */
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 80;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.7);
+			justify-content: center;
+			align-items: center;
+		}
+
+		/* Estilo para mostrar el modal */
+		#modal:not(.hidden) {
+			display: flex;
+		}
+
+		/* Estilo para el video */
+		#modal-video {
+			max-width: 90%; 
+			max-height: 90vh; 
+			width: auto; 
+			height: auto; 
+			object-fit: contain; 
+		}
+
+		@media only screen and (max-width: 600px) {
+			#imagen-fondo-productos {
+				content: url('Imagenes/fondo_productos_celular.webp');
+			}
+
+			#imagen-fondo-acerca-de {
+				content: url('Imagenes/acerca_de_fondo_celular.webp');
+			}
+		}
+
+
+
+
+
+
+	</style>
+<link href="https://fonts.googleapis.com/css2?family=Raleway&amp;display=swap" rel="stylesheet"/></head>
+<body>
+<!-- Barra de navegación -->
+<nav class="fixed w-full top-0 z-50 navbar-transition bg-transparent text-white" id="navbar">
+<div class="container mx-auto px-4 py-2 flex items-center justify-between">
+<div class="flex items-center">
+<a class="text-sm mx-4 md:text-xxl font-bold" data-aos="fade-right" data-aos-delay="1000" href="index.html">Inicio</a>
+<a class="text-sm mx-4 md:text-xxl font-bold" data-aos="fade-right" data-aos-delay="1300" href="#google-places">Ubicación</a>
+<a class="text-sm mx-4 md:text-xxl font-bold" data-aos="fade-right" data-aos-delay="1200" href="#mas-info" id="navbar-tipo">Más Sobre Nosotros</a>
+</div>
+<a href="#contacto" rel="noopener noreferrer" target="_blank">
+<img alt="Icon" class="w-10 h-10 ml-4" loading="lazy" src="https://cdn-icons-png.flaticon.com/512/2504/2504957.png"/>
+</a>
+</div>
+</nav>
+<!-- Sección Hero-->
+<section class="relative hero py-20 md:py-5 text-white" id="hero">
+<div class="absolute z-20 overlay"></div> <!-- Added overlay div -->
+<div class="absolute inset-0 z-0 bg-bottom" id="hero-background-1"></div>
+<!-- Div de la imagen de fondo 1 -->
+<div class="absolute inset-0 z-0 bg-bottom" id="hero-background-2"></div>
+<!-- Div de la imagen de fondo 2 -->
+<div class="relative z-20">
+<div class="container mx-auto px-2 py-0 md:py-10">
+<div class="grid grid-cols-1 items-center justify-items-center">
+<div class="py-0 front-elements">
+<div class="flex justify-center">
+<div class="md:mt--2 flex justify-center items-center bg-white rounded drop-shadow-xl h-full w-8/12 h-full md:w-2/4 bg-opacity-0" data-aos="fade-down" id="card-logo">
+<img alt="logo" class="aos-init aos-animate w-8/12 h-full md:w-2/4" data-aos="fade-up" fetchpriority="high" id="logo-image" src="Imagenes/logo.webp"/>
+</div>
+</div>
+<h1 class="text-5xl md:text-6xl text-center font-bold drop-shadow-xl" data-aos="fade-up" id="nombre-empresa">Aristeel SA de CV</h1>
+<div class="text-center py-10 px-1 md:px-0">
+<h1 class="text-2xl font-bold text-white md:text-4xl drop-shadow-xl" data-aos="fade-up" data-aos-delay="800" data-aos-offset="-100" id="slogan">Innovación y Calidad en Estructuras de Acero e Invernaderos</h1>
+<div class="flex justify-center mt-4 space-x-0 md:space-x-2">
+<a class="text-right" href="https://www.instagram.com/equi.monia/">
+<!-- <svg aria-hidden="true" class="w-5 h-5 mr-2 -ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path></svg> -->
+<button class="inline-flex items-center px-4 md:px-5 py-2 text-sm md:text-m font-medium text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:scale-105 hover:bg-blue-500 focus:outline-none focus:bg-blue-500 drop-shadow-xl" data-aos="fade-up" data-aos-delay="1000" data-aos-offset="-100" id="hero-boton-1"><!-- SVG icon -->
+<svg class="w-5 h-5 mr-2 -ml-1" fill="#FFFFFF" height="30px" id="icono-boton-hero" style="enable-background:new 0 0 512 512;" version="1.1" viewbox="0 0 30 30" width="30px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px"> <path d="M 9.9980469 3 C 6.1390469 3 3 6.1419531 3 10.001953 L 3 20.001953 C 3 23.860953 6.1419531 27 10.001953 27 L 20.001953 27 C 23.860953 27 27 23.858047 27 19.998047 L 27 9.9980469 C 27 6.1390469 23.858047 3 19.998047 3 L 9.9980469 3 z M 22 7 C 22.552 7 23 7.448 23 8 C 23 8.552 22.552 9 22 9 C 21.448 9 21 8.552 21 8 C 21 7.448 21.448 7 22 7 z M 15 9 C 18.309 9 21 11.691 21 15 C 21 18.309 18.309 21 15 21 C 11.691 21 9 18.309 9 15 C 9 11.691 11.691 9 15 9 z M 15 11 A 4 4 0 0 0 11 15 A 4 4 0 0 0 15 19 A 4 4 0 0 0 19 15 A 4 4 0 0 0 15 11 z"></path></svg>Instagram</button>
+</a>
+<a class="text-left" href="#contacto">
+<button class="inline-flex items-center px-4 md:px-5 py-2 text-sm md:text-m font-medium text-white capitalize transition-colors duration-300 transform bg-white-600 rounded-md hover:text-gray-700 hover:bg-blue-50 focus:outline-none focus:bg-blue-500 drop-shadow-xl" data-aos="fade-up" data-aos-delay="1200" data-aos-offset="-100" id="hero-boton-2">Conoce más</button>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Sección Descripción -->
+<section class="bg-white py-10">
+<div class="max-w-6xl px-6 py-10 mx-auto">
+<main class="relative z-20 w-full md:flex md:items-center xl:my-12">
+<div class="absolute w-full h-full md:h-full md:p-5 bg-gradient-to-r from-blue-700 to-blue-600 -z-10 rounded-2xl shadow-lg" id="color-descripcion"></div>
+<div class="w-full p-6 md:items-center rounded-2xl md:p-0 md:justify-evenly md:flex md:space-x-60">
+<!-- VIDEO DESCRIPCION -->
+<div class="w-full md:h-[250px] md:h-full md:w-4/6 perspective-left" data-aos="fade-up" data-aos-delay="1000" style="width: 350px;">
+<!-- <div class="skew-left-descripcion card-full-bleed"> -->
+<div class="card-full-bleed">
+<iframe ...="" class="perspective-left-description" id="dynamicIframe"></iframe>
+</div>
+</div>
+<!-- TEXTO DESCRIPCION -->
+<div class="mt-0 md:my-6 md:w-full">
+<div>
+<p class="text-6xl font-bold tracking-tight text-zinc-50" data-aos="fade-right" data-aos-delay="300" id="titulo-empresa">Aristeel SA de CV</p>
+<p class="text-xl font-bold text-zinc-200" data-aos="fade-right" data-aos-delay="600" id="subtitulo-empresa">¿Quiénes somos?</p>
+</div>
+<hr class="mt-4" data-aos="fade-right" data-aos-delay="600" style="border-color: whitesmoke; width: 600px;"/>
+<p class="mt-4 pr-5 text-md leading-relaxed text-zinc-50 md:text-xl" data-aos="fade-right" data-aos-delay="800" id="descripcion-empresa">Somos Aristeel SA de CV, con más de 20 años en el mercado y más de 3 millones de metros cuadrados construidos. Nos especializamos en el diseño y construcción de estructuras de acero e invernaderos, ofreciendo también una amplia gama de accesorios para invernaderos y sistemas de riego.</p>
+</div>
+</div>
+</main>
+</div>
+</section>
+<!-- Seccion Oferta -->
+<section id="seccion-oferta">
+<div class="flex-col overflow-hidden relative flex min-h-[420px] items-center px-5">
+<img class="absolute z-[-1] h-full w-full object-cover object-center inset-0" id="imagen-oferta" loading="lazy" src="Imagenes/oferta_fondo.webp"/>
+<section class="relative w-full max-w-[1280px] mt-28 mb-24 max-md:max-w-full max-md:my-10">
+<div class="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
+<article class="flex flex-col items-stretch max-md:w-full max-md:ml-0">
+<div class="relative flex grow flex-col items-stretch max-md:max-w-full max-md:mt-6">
+<h1 class="text-white text-5xl font-bold tracking-tighter max-md:max-w-full max-md:text-4xl max-md:leading-[53px]" data-aos="fade-down" data-aos-delay="0" id="titulo-oferta">Descubre Nuestra Oferta Exclusiva</h1>
+<p class="text-white text-lg leading-7 mt-5 max-md:max-w-full" data-aos="fade-down" data-aos-delay="400" id="parrafo-oferta-1">Disfruta de un 10% de descuento en tu primera compra con nosotros. Es tu oportunidad para experimentar la calidad y el servicio superior que Aristeel SA de CV ofrece.</p>
+<p class="text-white text-lg leading-7 mt-5 max-md:max-w-full" data-aos="fade-down" data-aos-delay="400">
+<span class="font-extrabold" id="parrafo-oferta-bold">Este descuento es por tiempo limitado y queremos que lo aproveches.</span></p>
+</div>
+</article>
+<div class="flex flex-col items-end md:ml-5">
+<a class="text-zinc-800 text-md md:text-lg text-center font-bold leading-5 tracking-tight whitespace-nowrap bg-white relative items-center w-full m-auto px-5 py-4 rounded-3xl mt-5 md:mt-15 hover:bg-blue-500 hover:text-white" data-aos="fade-down" data-aos-delay="1000" href="#contacto" id="boton-oferta-1">Reclama tu Descuento Ahora</a>
+<a class="text-white text-md md:text-lg text-center font-bold leading-5 tracking-tight whitespace-nowrap bg-white bg-opacity-10 relative items-center w-full m-auto py-4 p-5 rounded-3xl mt-5 md:mt-5 hover:bg-white hover:text-black" data-aos="fade-down" data-aos-delay="1200" href="#mas-info" id="boton-oferta-2">Explora Nuestros Productos</a>
+</div>
+</div>
+</section>
+</div>
+</section>
+<!-- Sección Introducción -->
+
+<!-- Sección 3 Tarjetas -->
+<section class="relative bg-gray-50 py-10" id="productos">
+<div class="absolute inset-0">
+<img class="object-cover h-full w-full" id="imagen-fondo-productos" src="Imagenes/fondo_productos_escritorio.webp"/>
+</div>
+<!-- <h1 class="text-4xl md:text-6xl drop-shadow-2xl font-bold text-center text-gray-50 capitalize drop-shadow-xl" data-aos="fade-down" data-aos-delay="0">
+			<span id="titulo-productos" class="text-transparent bg-clip-text bg-gradient-to-t to-gray-50 from-slate-300">Integración con Whatsapp</span></h1>
+			-->
+<h1 class="text-3xl md:text-4xl md:pb-5 font-extrabold text-center text-gray-200 md:text-gray-700 capitalize drop-shadow-xl" data-aos="fade-up" data-aos-delay="0" data-aos-offset="-50" id="titulo-productos">Nuestro Trabajo: Crear Soluciones para Invernaderos</h1>
+<div class="relative container px-5 mx-auto">
+<!-- Tu contenido aquí -->
+<div class="grid grid-cols-1 gap-4 md:gap-0 md:grid-cols-2 xl:grid-cols-3">
+<div class="glass flex flex-col items-center m-2 md:m-8 space-y-3 text-center hover:shadow-lg hover:shadow-black/30" data-aos="fade-up" data-aos-delay="1000" id="card-1">
+<h1 class="font-bold capitalize py-1 h-20 text-white hover:text-black text-2xl md:text-3xl" id="nombre-producto-1">Invernaderos y Estructuras de Acero</h1>
+<img alt="product 1" class="w-100 p-2 rounded-xl mt-5 hover:scale-100" id="imagen-producto" src="Imagenes/productos1.webp"/>
+<p class="text-white hover:text-black" id="product-description-1">Diseñamos y construimos invernaderos que se adaptan perfectamente a tus necesidades específicas.</p>
+</div>
+<div class="glass flex flex-col items-center m-2 md:m-8 space-y-3 text-center hover:shadow-lg hover:shadow-black/30" data-aos="fade-up" data-aos-delay="2000" id="card-1">
+<h1 class="font-bold capitalize py-1 h-20 text-white hover:text-black text-2xl md:text-3xl" id="nombre-producto-1">Accesorios de Invernadero</h1>
+<img alt="product 2" class="w-100 p-2 rounded-xl mt-5 hover:scale-100" id="imagen-producto" src="Imagenes/productos2.webp"/>
+<p class="text-white hover:text-black" id="product-description-1">Encuentra todo lo que necesitas para tu invernadero, desde sistemas de riego hasta control de clima.</p>
+</div>
+<div class="glass flex flex-col items-center m-2 md:m-8 space-y-3 text-center hover:shadow-lg hover:shadow-black/30" data-aos="fade-up" data-aos-delay="3000" id="card-1">
+<h1 class="font-bold capitalize py-1 h-20 text-white hover:text-black text-2xl md:text-3xl" id="nombre-producto-1">Sistemas de Riego</h1>
+<img alt="product 3" class="w-100 p-2 rounded-xl mt-5 hover:scale-100" id="imagen-producto" src="Imagenes/productos3.webp"/>
+<p class="text-white hover:text-black" id="product-description-1">Soluciones de riego eficientes y efectivas para asegurar la prosperidad de tus cultivos.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Sección Instagram -->
+
+<!-- Sección Diferenciadores -->
+<section class="gradient-bg md:py-10" id="diferenciadores">
+<div class="container mx-auto px-4 py-10 md:py-20 text-gray-700">
+<h1 class="text-4xl md:text-6xl md:pb-10 font-medium text-center text-gray-800 capitalize drop-shadow-xl" data-aos="fade-up" data-aos-offset="-50" id="firts_section_title">Nuestro Compromiso Único en Aristeel</h1>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="flex justify-center pt-5 mx-2 md:mx-10">
+<!-- <div class="h-50 w-full" data-aos="fade-up" data-aos-delay="200">
+						<div autoplay="" class="card-full-bleed hover:scale-105 rounded-lg" loop="" muted="">
+							<div id="video-diferenciadores"></div>
+						</div>
+					</div> -->
+<div class="flex justify-center" data-aos="fade-up" data-aos-delay="1400">
+<!-- <img src="https://media-public.canva.com/MADQ43cICJk/1/screen.jpg" alt="Diferenciadores" class="w-3/4 h-auto object-cover rounded-lg"> -->
+<img alt="Diferenciadores" class="w-full md:w-full h-auto object-cover rounded-lg" id="diferenciadores-image" loading="lazy" src="Imagenes/diferenciadores.webp"/>
+</div>
+</div>
+<!-- Diferenciadores en bullets -->
+<div class="md:mt-20 md:mt-0 content-center">
+<ul class="space-y-4" id="diferenciadores-list">
+
+<li class="flex items-start" data-aos="fade-right" data-aos-delay="600" data-aos-offset="-80">
+<i class="fas fa-check-circle mr-4 text-3xl"></i>
+<div>
+<h3 class="text-xl font-semibold mb-2">Experiencia y Confianza</h3>
+<p>Con más de 20 años en el mercado y más de 3 millones de metros cuadrados construidos, nuestra trayectoria habla por sí misma. Comprometidos con la excelencia, nuestros proyectos son sinónimo de calidad y fiabilidad.</p>
+</div>
+</li>
+
+<li class="flex items-start" data-aos="fade-right" data-aos-delay="750" data-aos-offset="-80">
+<i class="fas fa-check-circle mr-4 text-3xl"></i>
+<div>
+<h3 class="text-xl font-semibold mb-2">Calidad Superior</h3>
+<p>Nuestro enfoque en la calidad de los materiales y la precisión en la construcción asegura que cada proyecto sea duradero, eficiente y cumpla con las más altas expectativas.</p>
+</div>
+</li>
+
+<li class="flex items-start" data-aos="fade-right" data-aos-delay="900" data-aos-offset="-80">
+<i class="fas fa-check-circle mr-4 text-3xl"></i>
+<div>
+<h3 class="text-xl font-semibold mb-2">Innovación Continua</h3>
+<p>Estamos constantemente buscando y aplicando las últimas tecnologías y métodos constructivos para ofrecer a nuestros clientes las soluciones más avanzadas y efectivas.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Sección CTA -->
+<section class="mb-32">
+<div class="cta-background relative z-0 py-20 overflow-hidden bg-no-repeat bg-cover bg-center aos-init order-last" id="cta-imagen" style="background-image:url(Imagenes/cta.webp); height: 500px; background-position: center;">
+</div>
+<div class="relative z-30 container mx-auto px-6 md:px-10 md:pt-10 order-first">
+<div class="text-center text-gray-800">
+<div class="relative block rounded-lg shadow-lg px-2 py-12 md:py-16 md:px-12 aos-init" data-aos="fade-up" data-aos-delay="600" data-aos-offset="-50" style="margin-top: -170px; background: hsla(0, 0%, 100%, 0.7); backdrop-filter: blur(5px);">
+<h1 class="text-2xl md:text-3xl xl:text-7xl font-bold tracking-tight mb-12 drop-shadow-xl" id="cta-title-1">Impulsa tu proyecto con Aristeel S.A. de C.V.</h1>
+<h1 class="text-3xl md:text-2xl xl:text-5xl text-blue-700 -mt-10 font-bold tracking-tight mb-3 md:mb-12 drop-shadow-xl" id="cta-title-2">Explora soluciones a tu medida con nosotros.</h1>
+<a class="bg-blue-600 inline-block px-7 py-3 mb-2 md:mb-0 mr-0 md:mr-2 text-white font-bold text-lg md:text-md leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out bg-blue-600 inline-block px-7 py-3 mb-2 md:mb-0 mr-0 md:mr-2 text-white font-bold text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light" href="#contacto" id="cta-button" role="button">Contáctanos</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Sección Más Información -->
+<section id="mas-info">
+<div class="items-center self-stretch bg-white flex flex-col px-20 py-12 max-md:px-5">
+<h1 class="text-4xl md:text-6xl font-medium text-center text-gray-800 capitalize drop-shadow-xl" data-aos="fade-down" id="titulo-mas-info">Más información sobre nosotros</h1>
+<!-- Subsección 1 -->
+<div class="self-stretch max-md:max-w-full max-md:mt-10 max-md:pl-5 md:mt-20">
+<div class="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
+<div class="flex flex-col items-stretch w-[49%] max-md:w-full max-md:ml-0">
+<div class="items-start flex flex-col max-md:max-w-full">
+<!-- Titulo de subsección -->
+<div class="self-stretch text-gray-900 text-3xl font-semibold leading-10 max-md:max-w-full text-center md:text-left" data-aos="fade-down" data-aos-delay="500" id="sub-titulo-mas-info-1">Trayectoria y Confianza</div>
+<!-- Subtitulo de subsección -->
+<div class="self-stretch text-gray-500 text-lg leading-7 mt-4 max-md:max-w-full" data-aos="fade-down" data-aos-delay="1000" id="sub-parrafo-mas-info-1">Desde 1994, nuestra trayectoria está marcada por una sólida historia de confianza y compromiso con la excelencia, estableciendo los cimientos en Coatepec Harinas, una tierra de rica fertilidad y óptimas condiciones climáticas.</div>
+<!-- Bullets -->
+<div class="items-stretch self-stretch flex flex-col md:mt-5 pl-4 max-md:max-w-full">
+<div class="items-stretch flex justify-between gap-3 mt-5 max-md:max-w-full" data-aos="fade-down" data-aos-delay="1300">
+<img class="aspect-square object-contain object-center w-7 fill-purple-100 overflow-hidden shrink-0 max-w-full" loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/daf93b8072e4e929162239b52dc8b12696d3f1e0911f1e574f372c99b5cb9f53?apiKey=6b5c83656f3e4a62a08161b0635627a3&amp;"/>
+<div class="text-gray-700 text-md md:text-lg leading-7 grow shrink basis-auto max-md:max-w-full">
+<span class="font-extrabold" id="sub1-bold-1-mas-info">Más de 25 años</span> <span id="sub1-normal-1-mas-info">de experiencia y servicio confiable en la industria.</span>
+</div>
+</div>
+<div class="items-stretch flex justify-between gap-3 mt-5 max-md:max-w-full" data-aos="fade-down" data-aos-delay="1600">
+<img class="aspect-square object-contain object-center w-7 fill-purple-100 overflow-hidden shrink-0 max-w-full" loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/daf93b8072e4e929162239b52dc8b12696d3f1e0911f1e574f372c99b5cb9f53?apiKey=6b5c83656f3e4a62a08161b0635627a3&amp;"/>
+<div class="text-gray-700 text-md md:text-lg leading-7 grow shrink basis-auto max-md:max-w-full">
+<span class="font-extrabold" id="sub1-bold-2-mas-info">Compromiso Continuo</span> <span id="sub1-normal-2-mas-info">con la innovación y la sostenibilidad en la agricultura.</span>
+</div>
+</div>
+<div class="items-stretch flex justify-between gap-3 mt-5 max-md:max-w-full" data-aos="fade-down" data-aos-delay="1900">
+<img class="aspect-square object-contain object-center w-7 fill-purple-100 overflow-hidden shrink-0 max-w-full" loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/daf93b8072e4e929162239b52dc8b12696d3f1e0911f1e574f372c99b5cb9f53?apiKey=6b5c83656f3e4a62a08161b0635627a3&amp;"/>
+<div class="text-gray-700 text-md md:text-lg leading-7 grow shrink basis-auto max-md:max-w-full">
+<span class="font-extrabold" id="sub1-bold-3-mas-info">Calidad Comprobada</span> <span id="sub1-normal-3-mas-info">reconocida tanto en México como en el extranjero.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Imagen a la derecha -->
+<div class="flex flex-col items-center w-[45%] ml-5 max-md:w-full max-md:ml-0 hover:scale-105" data-aos="fade-left" data-aos-delay="1000">
+<img class="aspect-[1.16] object-contain object-center w-3/4 overflow-hidden grow max-md:max-w-full max-md:mt-10" id="mas-info-img1" loading="lazy" src="Imagenes/mas_info_img1.webp"/>
+</div>
+</div>
+</div>
+<!-- Subsección 2 -->
+<div class="self-stretch max-md:max-w-full max-md:mt-10 max-md:pl-5 md:mt-40">
+<div class="flex flex-col-reverse md:flex-row gap-5 max-md:items-stretch max-md:gap-0">
+<!-- Imagen a la izquierda para escritorio, abajo para móvil -->
+<div class="flex flex-col items-center w-[45%] mr-5 max-md:w-full max-md:mr-0 hover:scale-105" data-aos="fade-right" data-aos-delay="1000">
+<img class="aspect-[1.16] object-contain object-center w-3/4 overflow-hidden grow max-md:max-w-full max-md:mt-10" id="mas-info-img2" loading="lazy" src="Imagenes/mas_info_img2.webp"/>
+</div>
+<!-- Texto -->
+<div class="flex flex-col items-stretch w-[49%] max-md:w-full max-md:ml-0">
+<!-- Contenido de texto aquí -->
+<div class="flex flex-col items-stretch max-md:w-full max-md:ml-0">
+<div class="items-start flex flex-col max-md:max-w-full">
+<!-- Titulo de subsección -->
+<div class="self-stretch text-gray-900 text-3xl font-semibold leading-10 max-md:max-w-full text-center md:text-left" data-aos="fade-down" data-aos-delay="0" id="sub-titulo-mas-info-2">Compromiso con el Cliente</div>
+<!-- Subtitulo de subsección -->
+<div class="self-stretch text-gray-500 text-lg leading-7 mt-4 max-md:max-w-full" data-aos="fade-down" data-aos-delay="1000" id="sub-parrafo-mas-info-2">Nuestro objetivo es exceder las expectativas de nuestros clientes, ofreciendo productos y servicios que aporten un valor agregado real.</div>
+<!-- Bullets -->
+<div class="items-stretch self-stretch flex flex-col mt-8 pl-4 max-md:max-w-full">
+<div class="items-stretch flex justify-between gap-3 max-md:max-w-full" data-aos="fade-down" data-aos-delay="1300">
+<img class="aspect-square object-contain object-center w-7 fill-purple-100 overflow-hidden shrink-0 max-w-full" loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/daf93b8072e4e929162239b52dc8b12696d3f1e0911f1e574f372c99b5cb9f53?apiKey=6b5c83656f3e4a62a08161b0635627a3&amp;"/>
+<div class="text-gray-700 text-md md:text-lg leading-7 grow shrink basis-auto max-md:max-w-full">
+<span class="font-extrabold" id="sub2-bold-1-mas-info">Calidad a Precio Justo</span> <span id="sub2-normal-1-mas-info">Es nuestra promesa y compromiso.</span>
+</div>
+</div>
+<div class="items-stretch flex justify-between gap-3 mt-5 max-md:max-w-full" data-aos="fade-down" data-aos-delay="1600">
+<img class="aspect-square object-contain object-center w-7 fill-purple-100 overflow-hidden shrink-0 max-w-full" loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/daf93b8072e4e929162239b52dc8b12696d3f1e0911f1e574f372c99b5cb9f53?apiKey=6b5c83656f3e4a62a08161b0635627a3&amp;"/>
+<div class="text-gray-700 text-md md:text-lg leading-7 grow shrink basis-auto max-md:max-w-full">
+<span class="font-extrabold" id="sub2-bold-2-mas-info">Servicio Postventa</span> <span id="sub2-normal-2-mas-info">Garantizamos un óptimo soporte tras la compra.</span>
+</div>
+</div>
+<div class="items-stretch flex justify-between gap-3 mt-5 max-md:max-w-full" data-aos="fade-down" data-aos-delay="1900">
+<img class="aspect-square object-contain object-center w-7 fill-purple-100 overflow-hidden shrink-0 max-w-full" loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/daf93b8072e4e929162239b52dc8b12696d3f1e0911f1e574f372c99b5cb9f53?apiKey=6b5c83656f3e4a62a08161b0635627a3&amp;"/>
+<div class="text-gray-700 text-md md:text-lg leading-7 grow shrink basis-auto max-md:max-w-full">
+<span class="font-extrabold" id="sub2-bold-3-mas-info">Venta y Distribución</span> <span id="sub2-normal-3-mas-info">De equipos y materiales de alta calidad.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Subsección 3 -->
+<div class="self-stretch max-md:max-w-full max-md:mt-10 max-md:pl-5 md:mt-40">
+<div class="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
+<div class="flex flex-col items-stretch w-[49%] max-md:w-full max-md:ml-0">
+<div class="items-start flex flex-col max-md:max-w-full">
+<!-- Titulo de subsección -->
+<div class="self-stretch text-gray-900 text-3xl font-semibold leading-10 max-md:max-w-full text-center md:text-left" data-aos="fade-down" data-aos-delay="0" id="sub-titulo-mas-info-3">Visión y Reconocimiento</div>
+<!-- Subtitulo de subsección -->
+<div class="self-stretch text-gray-500 text-lg leading-7 mt-4 max-md:max-w-full" data-aos="fade-down" data-aos-delay="1000" id="sub-parrafo-mas-info-3">Miramos hacia el futuro con el objetivo de ser líderes en el sector, manteniendo los más altos estándares y contribuyendo al crecimiento económico del país.</div>
+<!-- Bullets -->
+<div class="items-stretch self-stretch flex flex-col mt-8 pl-4 max-md:max-w-full">
+<div class="items-stretch flex justify-between gap-3 max-md:max-w-full" data-aos="fade-down" data-aos-delay="1300">
+<img class="aspect-square object-contain object-center w-7 fill-purple-100 overflow-hidden shrink-0 max-w-full" loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/daf93b8072e4e929162239b52dc8b12696d3f1e0911f1e574f372c99b5cb9f53?apiKey=6b5c83656f3e4a62a08161b0635627a3&amp;"/>
+<div class="text-gray-700 text-md md:text-lg leading-7 grow shrink basis-auto max-md:max-w-full">
+<span class="font-extrabold" id="sub3-bold-1-mas-info">Líderes en Innovación</span> <span id="sub3-normal-1-mas-info">Modelos de invernadero avanzados y personalizados.</span>
+</div>
+</div>
+<div class="items-stretch flex justify-between gap-3 mt-5 max-md:max-w-full" data-aos="fade-down" data-aos-delay="1600">
+<img class="aspect-square object-contain object-center w-7 fill-purple-100 overflow-hidden shrink-0 max-w-full" loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/daf93b8072e4e929162239b52dc8b12696d3f1e0911f1e574f372c99b5cb9f53?apiKey=6b5c83656f3e4a62a08161b0635627a3&amp;"/>
+<div class="text-gray-700 text-md md:text-lg leading-7 grow shrink basis-auto max-md:max-w-full">
+<span class="font-extrabold" id="sub3-bold-2-mas-info">Crecimiento Económico</span> <span id="sub3-normal-2-mas-info">Contribución significativa al sector agrícola mexicano.</span>
+</div>
+</div>
+<div class="items-stretch flex justify-between gap-3 mt-5 max-md:max-w-full" data-aos="fade-down" data-aos-delay="1900">
+<img class="aspect-square object-contain object-center w-7 fill-purple-100 overflow-hidden shrink-0 max-w-full" loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/daf93b8072e4e929162239b52dc8b12696d3f1e0911f1e574f372c99b5cb9f53?apiKey=6b5c83656f3e4a62a08161b0635627a3&amp;"/>
+<div class="text-gray-700 text-md md:text-lg leading-7 grow shrink basis-auto max-md:max-w-full">
+<span class="font-extrabold" id="sub3-bold-3-mas-info">Altos Estándares de Calidad</span> <span id="sub3-normal-3-mas-info">Un equipo altamente calificado garantiza la excelencia.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Imagen a la derecha -->
+<div class="flex flex-col items-center w-[45%] ml-5 max-md:w-full max-md:ml-0 hover:scale-105" data-aos="fade-left" data-aos-delay="1000">
+<img class="aspect-[1.16] object-contain object-center w-3/4 overflow-hidden grow max-md:max-w-full max-md:mt-10" id="mas-info-img3" loading="lazy" src="Imagenes/mas_info_img3.webp"/>
+</div>
+</div>
+</div>
+<!-- Subsección 4 -->
+<!-- <div class="self-stretch max-md:max-w-full max-md:mt-10 max-md:pl-5 md:mt-40" >
+					<div class="flex flex-col-reverse md:flex-row gap-5 max-md:items-stretch max-md:gap-0">
+					
+						
+						<div class="flex flex-col items-center w-[45%] mr-5 max-md:w-full max-md:mr-0 hover:scale-105" data-aos="fade-down" data-aos-delay="1500">
+							<img id="mas-info-img4" loading="lazy" src="https://scontent.ftlc2-1.fna.fbcdn.net/v/t1.6435-9/159869107_261647328773903_3513297122998148641_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=810d5f&_nc_ohc=P9t5JOxFZaIAX_nxXaQ&_nc_ht=scontent.ftlc2-1.fna&oh=00_AfBmnY68uLBYNyNQYeAerIRW0FDfjXq6OXRuK-dwAFoyFA&oe=65BE73FF 100w" class="aspect-[1.16] object-contain object-center w-3/4 overflow-hidden grow max-md:max-w-full max-md:mt-10"/>
+							
+						</div>
+						
+						
+						<div class="flex flex-col items-stretch w-[49%] max-md:w-full max-md:ml-0">
+							<div class="items-start flex flex-col max-md:max-w-full">
+								
+								
+								<div id="sub-titulo-mas-info-4" class="self-stretch text-gray-900 text-3xl font-semibold leading-10 max-md:max-w-full text-center md:text-left" data-aos="fade-down" data-aos-delay="0">
+									Talleres para Niños y Adolescentes</div>
+									
+									
+									<div id="sub-parrafo-mas-info-4" class="self-stretch text-gray-500 text-lg leading-7 mt-4 max-md:max-w-full" data-aos="fade-down" data-aos-delay="1000">
+										Inspiramos a los más jóvenes a desarrollar su potencial a través de la conexión con los caballos, aprendiendo sobre sí mismos y sus emociones en un entorno tranquilo y seguro.
+									</div>
+
+									
+								<div class="items-stretch self-stretch flex flex-col mt-8 pl-4 max-md:max-w-full">
+									
+									<div class="items-stretch flex justify-between gap-3 max-md:max-w-full" data-aos="fade-down" data-aos-delay="1300">
+										<img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/daf93b8072e4e929162239b52dc8b12696d3f1e0911f1e574f372c99b5cb9f53?apiKey=6b5c83656f3e4a62a08161b0635627a3&"class="aspect-square object-contain object-center w-7 fill-purple-100 overflow-hidden shrink-0 max-w-full"/>
+										<div class="text-gray-700 text-md md:text-lg leading-7 grow shrink basis-auto max-md:max-w-full">
+											<span class="font-extrabold" id="sub4-bold-1-mas-info">Crecimiento Personal:</span> <span id="sub4-normal-1-mas-info">Estimula la autoestima y la confianza en un espacio de apoyo.</span>
+										</div>
+									</div>
+									
+									<div class="items-stretch flex justify-between gap-3 mt-5 max-md:max-w-full" data-aos="fade-down" data-aos-delay="1600">
+										<img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/daf93b8072e4e929162239b52dc8b12696d3f1e0911f1e574f372c99b5cb9f53?apiKey=6b5c83656f3e4a62a08161b0635627a3&" class="aspect-square object-contain object-center w-7 fill-purple-100 overflow-hidden shrink-0 max-w-full"/>
+										<div class="text-gray-700 text-md md:text-lg leading-7 grow shrink basis-auto max-md:max-w-full">
+											<span class="font-extrabold" id="sub4-bold-2-mas-info"></span>>Educación Emocional:</span> <span id="sub4-normal-2-mas-info">Enseña habilidades de vida y manejo emocional de manera práctica y divertida.</span>
+										</div>
+									</div>
+									
+									<div class="items-stretch flex justify-between gap-3 mt-5 max-md:max-w-full" data-aos="fade-down" data-aos-delay="1900">
+										<img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/daf93b8072e4e929162239b52dc8b12696d3f1e0911f1e574f372c99b5cb9f53?apiKey=6b5c83656f3e4a62a08161b0635627a3&"class="aspect-square object-contain object-center w-7 fill-purple-100 overflow-hidden shrink-0 max-w-full"/>
+										<div class="text-gray-700 text-md md:text-lg leading-7 grow shrink basis-auto max-md:max-w-full">
+											<span class="font-extrabold" id="sub4-bold-3-mas-info"></span>> Interacción y Socialización:</span> <span id="sub4-normal-3-mas-info">Promueve la amistad y el respeto mutuo entre los jovenes y los equinos.</span>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						
+					</div>
+				</div> -->
+</div>
+</section>
+<!-- Imagen Separador -->
+
+<!-- Sección Testimonios -->
+
+<!-- Sección Logos -->
+
+<!-- Sección 4 Bloques-->
+
+<!-- Sección Acerca de nosotros -->
+<section class="relative bg-gray-50 py-20" id="acerca-de">
+<div class="absolute inset-1">
+<img class="object-cover h-full w-full z-0" id="imagen-fondo-acerca-de" src="Imagenes/acerca_de_fondo_escritorio.webp">
+</img></div>
+<h1 class="text-3xl md:text-6xl pb-10 font-extrabold text-center text-white capitalize drop-shadow-xl" data-aos="fade-down" data-aos-delay="0" id="titulo-acercade">Acerca de Aristeel</h1>
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="text-center glass p-6 py-10 pb-15 rounded-lg shadow-lg" data-aos="fade-up" data-aos-offset="-100">
+<div class="text-center mb-2">
+<img alt="Misión" class="w-16 h-16 mx-auto" src="https://cdn-icons-png.flaticon.com/512/1545/1545569.png"/>
+</div>
+<h3 class="text-3xl font-bold text-gray-50 mb-4 drop-shadow-xl">Misión</h3>
+<p class="text-gray-50 text-lg" id="mision">Nuestra misión es liderar la industria con soluciones innovadoras en estructuras de acero e invernaderos, asegurando la máxima calidad y satisfacción del cliente.</p>
+</div>
+<div class="text-center glass p-6 py-10 pb-15 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="1000" data-aos-offset="-100">
+<div class="text-center mb-2">
+<img alt="Visión" class="w-16 h-16 mx-auto" src="https://cdn-icons-png.flaticon.com/512/10423/10423345.png"/>
+</div>
+<h3 class="text-3xl font-bold text-white mb-4 drop-shadow-xl">Visión</h3>
+<p class="text-gray-50 text-lg" id="vision">Convertirnos en el referente mundial en diseño y construcción de estructuras de acero e invernaderos, impulsando el desarrollo sustentable y la innovación en cada proyecto.</p>
+</div>
+<div class="text-center glass p-6 py-10 pb-15 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="2000" data-aos-offset="-100">
+<div class="text-center mb-2">
+<img alt="Objetivos" class="w-16 h-16 mx-auto" src="https://cdn-icons-png.flaticon.com/512/10104/10104148.png"/>
+</div>
+<h3 class="text-3xl font-bold text-white mb-4 drop-shadow-xl">Objetivos</h3>
+<p class="text-gray-50 text-lg" id="objetivo">Proveer a nuestros clientes con soluciones integrales, desde el diseño hasta la ejecución, asegurando siempre la máxima calidad y eficiencia en nuestros servicios.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Ubicación -->
+<section class="relative py-60 px-4 text-left justify-left">
+<iframe allowfullscreen="True" class="absolute inset-0 w-full h-full" id="google-places" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCSMI2Hh70KP_FqVdqABZgW5mQ9iXH0LFo&amp;q=Carretera San Alejo-Zacualpan km. 4.5, Colonia Adolfo Lopez Mateos, Coatepec Harinas, Edo. Mex" style="border:0">
+</iframe>
+<div class="contenedor-principal-ubicacion absolute z-10 top-32 right-2 md:left-2 md:mx-auto sm:w-full sm:px-2 container space-x-10">
+<div class="sub-contenedor-ubicacion mx-5 text-slate-50 glass-location shadow-md sm:mx-2" data-aos="fade-right">
+<h2 class="text-4xl md:text-7xl font-bold m-2 drop-shadow-xl" data-aos="fade-right" data-aos-delay="400">
+					Ubicación
+				</h2>
+<div class="flex items-center space-x-2 text-xl md:text-2xl drop-shadow-xl" data-aos="fade-up" data-aos-delay="600">
+<img alt="location" class="w-10 h-10" src="https://cdn-icons-png.flaticon.com/512/684/684908.png">
+<p class="mb-2 font-bold" id="ubicacion-ciudad">Carretera San Alejo-Zacualpan km. 4.5, Colonia Adolfo Lopez Mateos, Coatepec Harinas, Edo. Mex</p>
+</img></div>
+</div>
+</div>
+</section>
+<!-- Sección con imagen de separador -->
+
+<!-- Sección Video Separador -->
+
+<!-- Sección de Contacto -->
+<section class="bg-zinc-100 py-40" id="contacto">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-5 md:gap-8 items-center">
+<div class="flex col-span-2 pb-3 md:pb-0 text-center justify-center md:justify-end" data-aos="fade-right" data-aos-delay="100">
+<img alt="Contacto" class="w-1/4 md:w-2/5 object-cover" loading="lazy" src="https://cdn-icons-png.flaticon.com/512/5968/5968841.png"/>
+</div>
+<div class="col-span-3 text-slate-800 text-center md:text-left">
+<div>
+<h2 class="text-4xl md:text-6xl font-bold mb-4 drop-shadow-xl" data-aos="fade-up" data-aos-delay="200" id="contactanos-title">Contáctanos</h2>
+<p class="text-xl md:text-2xl font-semibold drop-shadow-xl" data-aos="fade-up" data-aos-delay="500" id="contacto-descripcion">Envíanos un whatsapp para recibir una cotización.</p>
+<!-- <p class="text-xl md:text-2xl pt-20 font-bold" data-aos="fade-up" data-aos-delay="2500">Construcciones y Proyectos DYCMACO</p> -->
+<p class="text-xl md:text-2xl mt-10 font-semibold drop-shadow-xl" data-aos="fade-up" data-aos-delay="1000">Whatsapp: <span class="font-normal" id="contacto-telefono">+55 5438 2669</span></p>
+<p class="text-xl md:text-2xl font-semibold drop-shadow-xl" data-aos="fade-up" data-aos-delay="900">Email:
+							<span class="font-normal" id="contacto-correo">aristeel@aristeel.com</span>
+</p>
+</div>
+<!-- <div class="mt-50 text-center"> -->
+<div class="py-10">
+<a href="https://wa.me/7221608465?text=Hola!%20Quiero%20ponerme%20en%20contacto%20contigo!">
+<button class="py-2 px-8 bg-gradient-to-b from-slate-300 to-slate-500 hover:from-emerald-400 hover:to-emerald-600 rounded-md shadow-lg" data-aos="fade-up" data-aos-delay="1200" type="button">
+<h2 class="text-2xl md:text-2xl font-bold text-white">Whatsapp
+								</h2>
+</button>
+</a>
+</div>
+<!-- </div> -->
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-800">
+<div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+<nav class="flex flex-wrap justify-center">
+<a class="px-6 py-2 text-base font-medium text-white hover:text-gray-300" href="#">Inicio</a>
+<a class="px-6 py-2 text-base font-medium text-white hover:text-gray-300" href="#">Contacto</a>
+</nav>
+<div class="mt-8 flex justify-center">
+<a class="text-gray-400 hover:text-gray-300" href="#">
+<span class="sr-only">Facebook</span>
+<i class="fab fa-facebook-f"></i>
+</a>
+<a class="ml-6 text-gray-400 hover:text-gray-300" href="#">
+<span class="sr-only">Twitter</span>
+<i class="fab fa-twitter"></i>
+</a>
+<a class="ml-6 text-gray-400 hover:text-gray-300" href="#">
+<span class="sr-only">Instagram</span>
+<i class="fab fa-instagram"></i>
+</a>
+<a class="ml-6 text-gray-400 hover:text-gray-300" href="#">
+<span class="sr-only">LinkedIn</span>
+<i class="fab fa-linkedin-in"></i>
+</a>
+</div>
+<p class="mt-8 text-center text-base text-gray-400" id="footer-company">Aristeel SA de CV ©2024. Todos los derechos reservados.</p>
+</div>
+</footer>
+<!--Función de Carrusel-->
+<script>
+		const carouselImages = document.querySelectorAll('.carousel-img');
+		let currentImageIndex = 0;
+
+		function changeCarouselImage() {
+			carouselImages.forEach((img, index) => {
+				if (index === currentImageIndex) {
+					img.style.opacity = '1';
+				} else {
+					img.style.opacity = '0';
+				}
+			});
+			currentImageIndex++;
+			if (currentImageIndex >= carouselImages.length) {
+				currentImageIndex = 0;
+			}
+		}
+
+		changeCarouselImage();
+		setInterval(changeCarouselImage, 3000);
+	</script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<!-- Duración de animaciones Fade in de los elementos -->
+<script>
+		AOS.init({
+			duration: 1700
+		});
+	</script>
+<!-- Función de aparecer Nav Bar -->
+<script>
+		const navbar = document.getElementById('navbar');
+		const scrollButton = document.getElementById('scrollButton');
+
+		function handleScroll() {
+			if (window.scrollY > 10) {
+				navbar.classList.remove('bg-transparent', 'text-white');
+				navbar.classList.add('bg-white', 'text-gray-800', 'shadow-md');
+				// scrollButton.classList.remove('bg-white', 'text-gray-500');
+				// scrollButton.classList.add('bg-gray-600', 'text-white');
+			} else {
+				navbar.classList.remove('bg-white', 'text-gray-800', 'shadow-md');
+				navbar.classList.add('bg-transparent', 'text-white');
+				// scrollButton.classList.remove('bg-gray-600', 'text-white');
+				// scrollButton.classList.add('bg-white', 'text-gray-500');
+			}
+		}
+
+		window.addEventListener('scroll', handleScroll);
+	</script>
+<!-- Funciones para Acordeon (Seccion Instagram) -->
+<!-- <script src="node_modules/@material-tailwind/html/scripts/collapse.js"></script> -->
+<script src="https://unpkg.com/@material-tailwind/html@latest/scripts/collapse.js"></script>
+<!-- Script de carrusel con video iphone mock up -->
+<script>
+		document.addEventListener('DOMContentLoaded', function() {
+		const slides = document.querySelectorAll('[data-te-carousel-item]');
+		let currentIndex = 0; // índice del slide actual
+
+		function updateSlides() {
+			slides.forEach((slide, index) => {
+			slide.style.opacity = index === currentIndex ? '1' : '0';
+			slide.style.transform = index === currentIndex ? 'none' : 'translateX(100%)';
+			slide.style.transition = 'opacity 600ms, transform 600ms';
+			});
+		}
+
+		// Inicializa el primer slide
+		updateSlides();
+
+		const prevButton = document.getElementById('prevSlide');
+		const nextButton = document.getElementById('nextSlide');
+
+		prevButton.addEventListener('click', () => {
+			currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+			updateSlides();
+		});
+
+		nextButton.addEventListener('click', () => {
+			currentIndex = (currentIndex + 1) % slides.length;
+			updateSlides();
+		});
+		});
+
+	</script>
+<script>
+		// Asegúrate de obtener los elementos del DOM
+		var modal = document.getElementById("modal");
+		var modalVideo = document.getElementById("modal-video");
+
+		// Cierra el modal si se hace clic en el fondo (pero no en el video)
+		modal.addEventListener('click', function(event) {
+			if (event.target === modal) {
+				closeModal();
+			}
+		});
+
+		// Evita que el evento de clic se propague al fondo cuando se hace clic en el video
+		modalVideo.addEventListener('click', function(event) {
+			event.stopPropagation();
+		});
+
+		// Función para mostrar el modal
+		function showModal(src) {
+			modal.classList.remove('hidden');
+			modalVideo.src = src;
+			modalVideo.play();
+		}
+
+		// Función para cerrar el modal
+		function closeModal() {
+			modal.classList.add('hidden');
+			modalVideo.pause();
+			modalVideo.src = '';
+		}
+
+	</script>
+<!-- Sección Call To Action V1 -->
+<!-- <section class="py-10 px-4 text-center bg-gradient-to-r from-amber-600 to-amber-800" id="section-cta">
+		<h2 class="text-4xl text-zinc-50 font-bold mb-6" data-aos="fade-up" data-aos-offset="-50" id="cta-title">
+			¿Listo para deleitar tus sentidos?</h2>
+		<p class="text-zinc-50 text-2xl mb-8" data-aos="fade-up" data-aos-delay="500" data-aos-offset="-50" id="cta-text">
+			Descubre nuestra <strong>variedad de chocolates</strong> y transforma tu <strong>experiencia sensorial.</strong></p>
+		<a class="inline-block bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300"
+			data-aos="fade-up" data-aos-delay="800" data-aos-offset="-50" href="#" id="cta-button">Comprar Ahora</a>
+	</section> -->
+<!-- Sección Ubicación V1-->
+<!-- <section class="py-40 px-4 text-center bg-gradient-to-r from-amber-600 to-amber-800" id="ubicacion">
+		<div class="container md:mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+			<div class="text-white mx-5 flex flex-col justify-center text-left pr-4 md:py-20">
+				<h2 class="text-6xl md:text-8xl font-bold mb-4" data-aos="fade-down">
+					Ubicación</h2>
+				<p class="text-2xl md:text-3xl mb-2" data-aos="fade-left" data-aos-delay="1000" id="ubicacion-calle">
+					Nueva Santo Domingo 241, San Francisco Tetecala</p>
+				<p class="text-2xl md:text-4xl font-bold mb-2" data-aos="fade-left" data-aos-delay="1000"
+					id="ubicacion-ciudad">Azcapotzalco, Ciudad de México</p>
+			</div>
+
+			<div class="relative w-full text-center mx-0 px-0 md:mx-10 rounded-xl"  data-aos="fade-right" data-aos-delay="100">
+            <iframe
+				id="google-places"
+                class="rounded-lg iframe-responsivo w-full h-full px-5"
+                style="border:0"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCSMI2Hh70KP_FqVdqABZgW5mQ9iXH0LFo&q=DYCMACO" 
+                style="border:2px;" allowfullscreen="True" loading="lazy"></iframe>
+        	</div>
+		</div>
+	</section> -->
+</body>
+</html>
