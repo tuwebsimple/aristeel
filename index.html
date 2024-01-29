@@ -36,7 +36,7 @@
 		window.addEventListener('DOMContentLoaded', () => {
 			const heroBackground1 = document.getElementById('hero-background-1');
 			const heroBackground2 = document.getElementById('hero-background-2');
-			const images = ["hero1.webp", "hero2.webp", "hero3.webp"];
+			const images = ["hero1.webp", "hero2.webp", "hero3.webp", "hero4.webp"];
 
 			// Iniciar el carrusel solo si la ventana es mayor que 768px
 			changeBackgroundImage(heroBackground1, heroBackground2, images, 0);
@@ -712,7 +712,7 @@
 </div>
 <h1 class="text-5xl md:text-8xl text-center font-bold drop-shadow-xl" data-aos="fade-up" id="nombre-empresa"></h1>
 <div class="text-center py-10 px-1 md:px-0">
-<h1 class="text-2xl font-bold text-white md:text-4xl drop-shadow-xl" data-aos="fade-up" data-aos-delay="800" data-aos-offset="-100" id="slogan">Expertos en Sistemas de Riego y Accesorios para Invernaderos</h1>
+<h1 class="text-2xl font-bold text-white md:text-4xl drop-shadow-xl" data-aos="fade-up" data-aos-delay="800" data-aos-offset="-100" id="slogan">Estructuras de Acero, Accesorios para Invernaderos y sistemas de riego</h1>
 <div class="flex justify-center mt-4 space-x-0 md:space-x-2">
 <a class="text-right" href="#lista-productos">
 <!-- <svg aria-hidden="true" class="w-5 h-5 mr-2 -ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path></svg> -->
@@ -734,16 +734,11 @@
 <div class="max-w-6xl px-6 py-10 mx-auto">
 <main class="relative z-20 w-full md:flex md:items-center xl:my-12">
 <div class="absolute w-full h-full md:h-full md:p-5 bg-gradient-to-r from-gray-700 to-gray-600 -z-10 rounded-2xl shadow-lg" id="color-descripcion"></div>
-<div class="w-full p-6 md:items-center rounded-2xl md:p-0 md:justify-evenly md:flex md:space-x-60">
-<!-- VIDEO DESCRIPCION -->
-<div class="w-full md:h-[250px] md:h-full md:w-4/6 perspective-left" data-aos="fade-up" data-aos-delay="1000" style="width: 350px;">
-<!-- <div class="skew-left-descripcion card-full-bleed"> -->
-<div class="card-full-bleed">
-<iframe ...="" class="perspective-left-description" id="dynamicIframe"></iframe>
-</div>
-</div>
+<div class="w-full p-6 md:flex md:items-center rounded-2xl md:p-0 md:justify-evenly">
+<!-- IMAGEN DESCRIPCION -->
+<img class="absolute md:relative md:w-1/2 rounded-2xl z-10 -top-12 -left-6 md:bottom-10 md:-left-12" data-aos="fade-up" data-aos-delay="1000" id="imagen-descripcion" src="descripcion.webp" style="max-width:115%"/>
 <!-- TEXTO DESCRIPCION -->
-<div class="mt-0 md:my-6 md:w-full">
+<div class="mt-40 md:mt-6 md:w-1/2">
 <div>
 <p class="text-6xl font-bold tracking-tight text-zinc-50" data-aos="fade-right" data-aos-delay="300" id="titulo-empresa">Aristeel SA de CV</p>
 <p class="text-xl font-bold text-zinc-200" data-aos="fade-right" data-aos-delay="600" id="subtitulo-empresa">Líderes en Innovación Agrícola</p>
@@ -758,7 +753,7 @@
 <!-- Seccion Oferta -->
 <section id="seccion-oferta">
 <div class="flex-col overflow-hidden relative flex min-h-[420px] items-center px-5">
-<img class="absolute z-[-1] h-full w-full object-cover object-center inset-0" id="imagen-oferta" loading="lazy" src="oferta_fondo.webp"/>
+<img class="absolute z-[-1] h-full w-full object-cover object-center inset-0" id="imagen-oferta" loading="lazy" src="oferta_fondo.webp">
 <section class="relative w-full max-w-[1280px] mt-28 mb-24 max-md:max-w-full max-md:my-10">
 <div class="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
 <article class="flex flex-col items-stretch max-md:w-full max-md:ml-0">
@@ -775,90 +770,95 @@
 </div>
 </div>
 </section>
+</img></div>
+</section>
+<!-- Sección Lista de Productos -->
+<section id="lista-productos">
+<div class="container mx-auto px-4 py-10 md:py-20 text-gray-700">
+<h1 class="text-4xl md:text-5xl font-medium text-center text-gray-800 capitalize drop-shadow-xl" data-aos="fade-up" data-aos-offset="-50" id="titulo-lista-productos">Accesorios de invernadero y sistemas de riego</h1>
+<div class="bg-white">
+<div class="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-15 lg:max-w-7xl lg:px-8">
+<div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8 xl:grid-cols-4">
+<a class="group" data-aos="fade-down" data-aos-delay="1200" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*Sistema de Anclaje para Invernaderos*">
+<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+<img alt="Sistema de Anclaje para Invernaderos" class="h-full w-full object-cover object-center group-hover:opacity-75" src="lista_productos_img1.webp"/>
+</div>
+<h3 class="mt-4 text-lg font-extrabold text-gray-900">Sistema de Anclaje para Invernaderos</h3>
+<p class="mt-1 text-sm font-medium text-gray-600">Anclajes de precisión para invernaderos, diseñados para garantizar estabilidad y resistencia frente a vientos fuertes y condiciones adversas.</p>
+</a>
+
+<a class="group" data-aos="fade-down" data-aos-delay="1450" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*Conectores de Acero Ajustables*">
+<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+<img alt="Conectores de Acero Ajustables" class="h-full w-full object-cover object-center group-hover:opacity-75" src="lista_productos_img2.webp"/>
+</div>
+<h3 class="mt-4 text-lg font-extrabold text-gray-900">Conectores de Acero Ajustables</h3>
+<p class="mt-1 text-sm font-medium text-gray-600">Facilita la construcción y el ensamblaje de invernaderos con conectores de acero ajustables, proporcionando solidez y flexibilidad estructural.</p>
+</a>
+
+<a class="group" data-aos="fade-down" data-aos-delay="1700" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*Piezas Metálicas para Montaje*">
+<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+<img alt="Piezas Metálicas para Montaje" class="h-full w-full object-cover object-center group-hover:opacity-75" src="lista_productos_img3.webp"/>
+</div>
+<h3 class="mt-4 text-lg font-extrabold text-gray-900">Piezas Metálicas para Montaje</h3>
+<p class="mt-1 text-sm font-medium text-gray-600">Componentes metálicos de alta calidad para el montaje de estructuras agrícolas, ofreciendo seguridad y durabilidad en cada conexión.</p>
+</a>
+
+<a class="group" data-aos="fade-down" data-aos-delay="1950" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*Perfiles de Aluminio para Invernadero*">
+<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+<img alt="Perfiles de Aluminio para Invernadero" class="h-full w-full object-cover object-center group-hover:opacity-75" src="lista_productos_img4.webp"/>
+</div>
+<h3 class="mt-4 text-lg font-extrabold text-gray-900">Perfiles de Aluminio para Invernadero</h3>
+<p class="mt-1 text-sm font-medium text-gray-600">Perfiles de aluminio personalizados para el ensamblaje rápido y eficiente de invernaderos, combinando ligereza con resistencia extrema.</p>
+</a>
+
+<a class="group" data-aos="fade-down" data-aos-delay="2200" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*Accesorios de Acero Inoxidable*">
+<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+<img alt="Accesorios de Acero Inoxidable" class="h-full w-full object-cover object-center group-hover:opacity-75" src="lista_productos_img5.webp"/>
+</div>
+<h3 class="mt-4 text-lg font-extrabold text-gray-900">Accesorios de Acero Inoxidable</h3>
+<p class="mt-1 text-sm font-medium text-gray-600">Optimiza tu invernadero con accesorios de acero inoxidable, resistentes a la corrosión y diseñados para un rendimiento duradero en ambientes húmedos.</p>
+</a>
+
+<a class="group" data-aos="fade-down" data-aos-delay="2450" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*Invernaderos de Polietileno de Larga Duración*">
+<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+<img alt="Invernaderos de Polietileno de Larga Duración" class="h-full w-full object-cover object-center group-hover:opacity-75" src="lista_productos_img6.webp"/>
+</div>
+<h3 class="mt-4 text-lg font-extrabold text-gray-900">Invernaderos de Polietileno de Larga Duración</h3>
+<p class="mt-1 text-sm font-medium text-gray-600">Invernaderos robustos diseñados para maximizar la producción todo el año, con material de polietileno duradero y resistente al clima.</p>
+</a>
+
+<a class="group" data-aos="fade-down" data-aos-delay="2700" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*Cubiertas Reforzadas para Invernadero*">
+<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+<img alt="Cubiertas Reforzadas para Invernadero" class="h-full w-full object-cover object-center group-hover:opacity-75" src="lista_productos_img7.webp"/>
+</div>
+<h3 class="mt-4 text-lg font-extrabold text-gray-900">Cubiertas Reforzadas para Invernadero</h3>
+<p class="mt-1 text-sm font-medium text-gray-600">Protege tus cultivos con cubiertas reforzadas de alta tecnología, ofreciendo máxima transparencia y resistencia a los elementos.</p>
+</a>
+
+<a class="group" data-aos="fade-down" data-aos-delay="2950" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*Estructuras Metálicas para Invernaderos*">
+<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+<img alt="Estructuras Metálicas para Invernaderos" class="h-full w-full object-cover object-center group-hover:opacity-75" src="lista_productos_img8.webp"/>
+</div>
+<h3 class="mt-4 text-lg font-extrabold text-gray-900">Estructuras Metálicas para Invernaderos</h3>
+<p class="mt-1 text-sm font-medium text-gray-600">Construye la base de tu producción agrícola con estructuras metálicas galvanizadas, diseñadas para una instalación eficiente y una larga vida útil.</p>
+</a>
+
+<a class="group" data-aos="fade-down" data-aos-delay="3200" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*Invernaderos Ventilados de Alto Rendimiento*">
+<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+<img alt="Invernaderos Ventilados de Alto Rendimiento" class="h-full w-full object-cover object-center group-hover:opacity-75" src="lista_productos_img9.webp"/>
+</div>
+<h3 class="mt-4 text-lg font-extrabold text-gray-900">Invernaderos Ventilados de Alto Rendimiento</h3>
+<p class="mt-1 text-sm font-medium text-gray-600">Asegura una ventilación óptima y control de temperatura con invernaderos especializados, ideales para cultivos que requieren condiciones específicas.</p>
+</a>
+</div>
+</div>
+</div>
 </div>
 </section>
 <!-- Sección Introducción -->
 
-<!-- Sección 3 Tarjetas -->
-<section class="relative bg-gray-50 py-10" id="productos">
-<div class="absolute inset-0">
-<img class="object-cover h-full w-full" id="imagen-fondo-productos" src="fondo_productos_escritorio.webp"/>
-</div>
-<!-- <h1 class="text-4xl md:text-6xl drop-shadow-2xl font-bold text-center text-gray-50 capitalize drop-shadow-xl" data-aos="fade-down" data-aos-delay="0">
-			<span id="titulo-productos" class="text-transparent bg-clip-text bg-gradient-to-t to-gray-50 from-slate-300">Integración con Whatsapp</span></h1>
-			-->
-<h1 class="text-3xl md:text-4xl md:pb-5 font-extrabold text-center text-gray-200 md:text-gray-700 capitalize drop-shadow-xl" data-aos="fade-up" data-aos-delay="0" data-aos-offset="-50" id="titulo-productos">Especialistas en Soluciones para Invernaderos</h1>
-<div class="relative container px-5 mx-auto">
-<!-- Tu contenido aquí -->
-<div class="grid grid-cols-1 gap-4 md:gap-0 md:grid-cols-2 xl:grid-cols-3">
-<div class="glass flex flex-col items-center m-2 md:m-8 space-y-3 text-center hover:shadow-lg hover:shadow-black/30" data-aos="fade-up" data-aos-delay="1000" id="card-1">
-<h1 class="font-bold capitalize py-1 h-20 text-white hover:text-black text-2xl md:text-2xl" id="nombre-producto-1">Invernaderos y Estructuras de Acero</h1>
-<img alt="product 1" class="w-100 p-2 rounded-xl mt-5 hover:scale-100" id="imagen-producto" src="productos1.webp"/>
-<p class="text-white hover:text-black" id="product-description-1">Creamos invernaderos a medida, integrando estructuras de acero duraderas y diseñadas específicamente para cumplir con tus requisitos agrícolas.</p>
-</div>
-<div class="glass flex flex-col items-center m-2 md:m-8 space-y-3 text-center hover:shadow-lg hover:shadow-black/30" data-aos="fade-up" data-aos-delay="2000" id="card-1">
-<h1 class="font-bold capitalize py-1 h-20 text-white hover:text-black text-2xl md:text-2xl" id="nombre-producto-200">Accesorios Innovadores para Invernaderos</h1>
-<img alt="product 2" class="w-100 p-2 rounded-xl mt-5 hover:scale-100" id="imagen-producto" src="productos2.webp"/>
-<p class="text-white hover:text-black" id="product-description-1">Ofrecemos una selección completa de accesorios para invernaderos, incluyendo avanzados sistemas de riego, control de clima y más, para optimizar tu producción.</p>
-</div>
-<div class="glass flex flex-col items-center m-2 md:m-8 space-y-3 text-center hover:shadow-lg hover:shadow-black/30" data-aos="fade-up" data-aos-delay="3000" id="card-1">
-<h1 class="font-bold capitalize py-1 h-20 text-white hover:text-black text-2xl md:text-2xl" id="nombre-producto-3">Sistemas de Riego de Alta Eficiencia</h1>
-<img alt="product 3" class="w-100 p-2 rounded-xl mt-5 hover:scale-100" id="imagen-producto" src="productos3.webp"/>
-<p class="text-white hover:text-black" id="product-description-1">Desarrollamos y suministramos sistemas de riego personalizados que garantizan la eficiencia del agua y el crecimiento saludable de tus cultivos, adaptándose a las condiciones específicas de tu invernadero.</p>
-</div>
-</div>
-</div>
-</section>
 <!-- Sección Instagram -->
 
-<!-- Sección Diferenciadores -->
-<section class="gradient-bg md:py-10" id="diferenciadores">
-<div class="container mx-auto px-4 py-10 md:py-20 text-gray-700">
-<h1 class="text-4xl md:text-6xl md:pb-10 font-medium text-center text-gray-800 capitalize drop-shadow-xl" data-aos="fade-up" data-aos-offset="-50" id="firts_section_title">Nuestro Compromiso Único en Aristeel</h1>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-<div class="flex justify-center pt-5 mx-2 md:mx-10">
-<!-- <div class="h-50 w-full" data-aos="fade-up" data-aos-delay="200">
-						<div autoplay="" class="card-full-bleed hover:scale-105 rounded-lg" loop="" muted="">
-							<div id="video-diferenciadores"></div>
-						</div>
-					</div> -->
-<div class="flex justify-center" data-aos="fade-up" data-aos-delay="1400">
-<!-- <img src="https://media-public.canva.com/MADQ43cICJk/1/screen.jpg" alt="Diferenciadores" class="w-3/4 h-auto object-cover rounded-lg"> -->
-<img alt="Diferenciadores" class="w-full md:w-full h-auto object-contain rounded-lg" id="diferenciadores-image" loading="lazy" src="diferenciadores.webp"/>
-</div>
-</div>
-<!-- Diferenciadores en bullets -->
-<div class="md:mt-20 md:mt-0 content-center">
-<ul class="space-y-4" id="diferenciadores-list">
-
-<li class="flex items-start" data-aos="fade-right" data-aos-delay="600" data-aos-offset="-80">
-<i class="fas fa-check-circle mr-4 text-3xl"></i>
-<div>
-<h3 class="text-xl font-semibold mb-2">Experiencia y Confianza</h3>
-<p>Con más de 20 años en el mercado y más de 3 millones de metros cuadrados construidos, nuestra trayectoria habla por sí misma. Comprometidos con la excelencia, nuestros proyectos son sinónimo de calidad y fiabilidad.</p>
-</div>
-</li>
-
-<li class="flex items-start" data-aos="fade-right" data-aos-delay="750" data-aos-offset="-80">
-<i class="fas fa-check-circle mr-4 text-3xl"></i>
-<div>
-<h3 class="text-xl font-semibold mb-2">Calidad Superior</h3>
-<p>Nuestro enfoque en la calidad de los materiales y la precisión en la construcción asegura que cada proyecto sea duradero, eficiente y cumpla con las más altas expectativas.</p>
-</div>
-</li>
-
-<li class="flex items-start" data-aos="fade-right" data-aos-delay="900" data-aos-offset="-80">
-<i class="fas fa-check-circle mr-4 text-3xl"></i>
-<div>
-<h3 class="text-xl font-semibold mb-2">Innovación Continua</h3>
-<p>Estamos constantemente buscando y aplicando las últimas tecnologías y métodos constructivos para ofrecer a nuestros clientes las soluciones más avanzadas y efectivas.</p>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
 <!-- Sección CTA -->
 <section class="mb-32">
 <div class="cta-background relative z-0 py-20 overflow-hidden bg-no-repeat bg-cover bg-center aos-init order-last" id="cta-imagen" style="background-image:url(cta.webp); height: 500px; background-position: center;">
@@ -873,120 +873,37 @@
 </div>
 </div>
 </section>
-<!-- Sección Lista de Productos -->
-<section id="lista-productos">
-<div class="container mx-auto px-4 py-10 md:py-20 text-gray-700">
-<h1 class="text-4xl md:text-6xl font-medium text-center text-gray-800 capitalize drop-shadow-xl" data-aos="fade-up" data-aos-offset="-50" id="titulo-lista-productos">Soluciones para accesorios de invernadero y sistemas de riego.</h1>
-<div class="bg-white">
-<div class="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-15 lg:max-w-7xl lg:px-8">
-<div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8 xl:grid-cols-4">
-<a class="group" data-aos="fade-down" data-aos-delay="1200" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*Invernaderos de Polietileno de Larga Duración*">
-<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-<img alt="Invernaderos de Polietileno de Larga Duración" class="h-full w-full object-cover object-center group-hover:opacity-75" src="lista_productos_img1.webp"/>
-</div>
-<h3 class="mt-4 text-lg font-extrabold text-gray-900">Invernaderos de Polietileno de Larga Duración</h3>
-<p class="mt-1 text-sm font-medium text-gray-600">Invernaderos robustos diseñados para maximizar la producción todo el año, con material de polietileno duradero y resistente al clima.</p>
-</a>
-
-<a class="group" data-aos="fade-down" data-aos-delay="1450" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*Cubiertas Reforzadas para Invernadero*">
-<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-<img alt="Cubiertas Reforzadas para Invernadero" class="h-full w-full object-cover object-center group-hover:opacity-75" src="lista_productos_img2.webp"/>
-</div>
-<h3 class="mt-4 text-lg font-extrabold text-gray-900">Cubiertas Reforzadas para Invernadero</h3>
-<p class="mt-1 text-sm font-medium text-gray-600">Protege tus cultivos con cubiertas reforzadas de alta tecnología, ofreciendo máxima transparencia y resistencia a los elementos.</p>
-</a>
-
-<a class="group" data-aos="fade-down" data-aos-delay="1700" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*Estructuras Metálicas para Invernaderos*">
-<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-<img alt="Estructuras Metálicas para Invernaderos" class="h-full w-full object-cover object-center group-hover:opacity-75" src="lista_productos_img3.webp"/>
-</div>
-<h3 class="mt-4 text-lg font-extrabold text-gray-900">Estructuras Metálicas para Invernaderos</h3>
-<p class="mt-1 text-sm font-medium text-gray-600">Construye la base de tu producción agrícola con estructuras metálicas galvanizadas, diseñadas para una instalación eficiente y una larga vida útil.</p>
-</a>
-
-<a class="group" data-aos="fade-down" data-aos-delay="1950" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*Invernaderos Ventilados de Alto Rendimiento*">
-<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-<img alt="Invernaderos Ventilados de Alto Rendimiento" class="h-full w-full object-cover object-center group-hover:opacity-75" src="lista_productos_img4.webp"/>
-</div>
-<h3 class="mt-4 text-lg font-extrabold text-gray-900">Invernaderos Ventilados de Alto Rendimiento</h3>
-<p class="mt-1 text-sm font-medium text-gray-600">Asegura una ventilación óptima y control de temperatura con invernaderos especializados, ideales para cultivos que requieren condiciones específicas.</p>
-</a>
-
-<a class="group" data-aos="fade-down" data-aos-delay="2200" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*Sistema de Anclaje para Invernaderos*">
-<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-<img alt="Sistema de Anclaje para Invernaderos" class="h-full w-full object-cover object-center group-hover:opacity-75" src="lista_productos_img5.webp"/>
-</div>
-<h3 class="mt-4 text-lg font-extrabold text-gray-900">Sistema de Anclaje para Invernaderos</h3>
-<p class="mt-1 text-sm font-medium text-gray-600">Anclajes de precisión para invernaderos, diseñados para garantizar estabilidad y resistencia frente a vientos fuertes y condiciones adversas.</p>
-</a>
-
-<a class="group" data-aos="fade-down" data-aos-delay="2450" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*Conectores de Acero Ajustables*">
-<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-<img alt="Conectores de Acero Ajustables" class="h-full w-full object-cover object-center group-hover:opacity-75" src="lista_productos_img6.webp"/>
-</div>
-<h3 class="mt-4 text-lg font-extrabold text-gray-900">Conectores de Acero Ajustables</h3>
-<p class="mt-1 text-sm font-medium text-gray-600">Facilita la construcción y el ensamblaje de invernaderos con conectores de acero ajustables, proporcionando solidez y flexibilidad estructural.</p>
-</a>
-
-<a class="group" data-aos="fade-down" data-aos-delay="2700" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*Piezas Metálicas para Montaje*">
-<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-<img alt="Piezas Metálicas para Montaje" class="h-full w-full object-cover object-center group-hover:opacity-75" src="lista_productos_img7.webp"/>
-</div>
-<h3 class="mt-4 text-lg font-extrabold text-gray-900">Piezas Metálicas para Montaje</h3>
-<p class="mt-1 text-sm font-medium text-gray-600">Componentes metálicos de alta calidad para el montaje de estructuras agrícolas, ofreciendo seguridad y durabilidad en cada conexión.</p>
-</a>
-
-<a class="group" data-aos="fade-down" data-aos-delay="2950" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*Perfiles de Aluminio para Invernadero*">
-<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-<img alt="Perfiles de Aluminio para Invernadero" class="h-full w-full object-cover object-center group-hover:opacity-75" src="lista_productos_img8.webp"/>
-</div>
-<h3 class="mt-4 text-lg font-extrabold text-gray-900">Perfiles de Aluminio para Invernadero</h3>
-<p class="mt-1 text-sm font-medium text-gray-600">Perfiles de aluminio personalizados para el ensamblaje rápido y eficiente de invernaderos, combinando ligereza con resistencia extrema.</p>
-</a>
-
-<a class="group" data-aos="fade-down" data-aos-delay="3200" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*Accesorios de Acero Inoxidable*">
-<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-<img alt="Accesorios de Acero Inoxidable" class="h-full w-full object-cover object-center group-hover:opacity-75" src="lista_productos_img9.webp"/>
-</div>
-<h3 class="mt-4 text-lg font-extrabold text-gray-900">Accesorios de Acero Inoxidable</h3>
-<p class="mt-1 text-sm font-medium text-gray-600">Optimiza tu invernadero con accesorios de acero inoxidable, resistentes a la corrosión y diseñados para un rendimiento duradero en ambientes húmedos.</p>
-</a>
-</div>
-</div>
-</div>
-</div>
-</section>
 <!-- Sección Más Información -->
 <section id="mas-info">
 <div class="items-center self-stretch bg-white flex flex-col px-20 py-12 max-md:px-5">
-<h1 class="text-4xl md:text-6xl font-medium text-center text-gray-800 capitalize drop-shadow-xl" data-aos="fade-down" id="titulo-mas-info">Por Qué Elegir Aristeel</h1>
+<h1 class="text-4xl md:text-6xl font-medium text-center text-gray-800 capitalize drop-shadow-xl" data-aos="fade-down" id="titulo-mas-info">¿Por Qué Elegir Aristeel?</h1>
 <!-- Subsección 1 -->
 <div class="self-stretch max-md:max-w-full max-md:mt-10 max-md:pl-5 md:mt-20">
 <div class="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
 <div class="flex flex-col items-stretch w-[49%] max-md:w-full max-md:ml-0">
 <div class="items-start flex flex-col max-md:max-w-full">
 <!-- Titulo de subsección -->
-<div class="self-stretch text-gray-900 text-3xl font-semibold leading-10 max-md:max-w-full text-center md:text-left" data-aos="fade-down" data-aos-delay="500" id="sub-titulo-mas-info-1">Experiencia y Calidad</div>
+<div class="self-stretch text-gray-900 text-3xl font-semibold leading-10 max-md:max-w-full text-center md:text-left" data-aos="fade-down" data-aos-delay="500" id="sub-titulo-mas-info-1">Certificación y Excelencia en Invernaderos</div>
 <!-- Subtitulo de subsección -->
-<div class="self-stretch text-gray-500 text-lg leading-7 mt-4 max-md:max-w-full" data-aos="fade-down" data-aos-delay="1000" id="sub-parrafo-mas-info-1">Desde 1994, nos hemos consolidado como referentes en la industria, con un enfoque en accesorios de invernadero y sistemas de riego, fortaleciendo nuestra presencia en Coatepec Harinas.</div>
+<div class="self-stretch text-gray-500 text-lg leading-7 mt-4 max-md:max-w-full" data-aos="fade-down" data-aos-delay="1000" id="sub-parrafo-mas-info-1">Aristeel se enorgullece de ser la segunda empresa nacional en recibir un reconocimiento por nuestro compromiso con la calidad en invernaderos. Nuestra certificación es una garantía de que cada estructura cumple con los más altos estándares de calidad y eficiencia.</div>
 <!-- Bullets -->
 <div class="items-stretch self-stretch flex flex-col md:mt-5 pl-4 max-md:max-w-full">
 <div class="items-stretch flex justify-between gap-3 mt-5 max-md:max-w-full" data-aos="fade-down" data-aos-delay="1300">
 <img class="aspect-square object-contain object-center w-7 fill-purple-100 overflow-hidden shrink-0 max-w-full" loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/daf93b8072e4e929162239b52dc8b12696d3f1e0911f1e574f372c99b5cb9f53?apiKey=6b5c83656f3e4a62a08161b0635627a3&amp;">
 <div class="text-gray-700 text-md md:text-lg leading-7 grow shrink basis-auto max-md:max-w-full">
-<span class="font-extrabold" id="sub1-bold-1-mas-info">Más de 25 años</span> <span id="sub1-normal-1-mas-info">de experiencia en soluciones agrícolas de alta calidad.</span>
+<span class="font-extrabold" id="sub1-bold-1-mas-info">Certificación de Calidad NMX-E-255-CNCP-2008</span> <span id="sub1-normal-1-mas-info">que valida nuestro compromiso con la excelencia y la satisfacción del cliente.</span>
 </div>
 </img></div>
 <div class="items-stretch flex justify-between gap-3 mt-5 max-md:max-w-full" data-aos="fade-down" data-aos-delay="1600">
 <img class="aspect-square object-contain object-center w-7 fill-purple-100 overflow-hidden shrink-0 max-w-full" loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/daf93b8072e4e929162239b52dc8b12696d3f1e0911f1e574f372c99b5cb9f53?apiKey=6b5c83656f3e4a62a08161b0635627a3&amp;">
 <div class="text-gray-700 text-md md:text-lg leading-7 grow shrink basis-auto max-md:max-w-full">
-<span class="font-extrabold" id="sub1-bold-2-mas-info">Innovación Constante</span> <span id="sub1-normal-2-mas-info">en accesorios para invernaderos y sistemas de riego.</span>
+<span class="font-extrabold" id="sub1-bold-2-mas-info">Reconocimiento Nacional</span> <span id="sub1-normal-2-mas-info">como líderes en la industria, reflejando la confianza que nuestros clientes depositan en nosotros.</span>
 </div>
 </img></div>
 <div class="items-stretch flex justify-between gap-3 mt-5 max-md:max-w-full" data-aos="fade-down" data-aos-delay="1900">
 <img class="aspect-square object-contain object-center w-7 fill-purple-100 overflow-hidden shrink-0 max-w-full" loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/daf93b8072e4e929162239b52dc8b12696d3f1e0911f1e574f372c99b5cb9f53?apiKey=6b5c83656f3e4a62a08161b0635627a3&amp;">
 <div class="text-gray-700 text-md md:text-lg leading-7 grow shrink basis-auto max-md:max-w-full">
-<span class="font-extrabold" id="sub1-bold-3-mas-info">Calidad Asegurada</span> <span id="sub1-normal-3-mas-info">con reconocimiento en México y más allá.</span>
+<span class="font-extrabold" id="sub1-bold-3-mas-info">Innovación y Tecnología</span> <span id="sub1-normal-3-mas-info">aplicadas para el desarrollo de invernaderos de alta calidad que responden a las necesidades del mercado.</span>
 </div>
 </img></div>
 </div>
@@ -994,8 +911,8 @@
 </div>
 <!-- Imagen a la derecha -->
 <div class="flex flex-col items-center w-[45%] ml-5 max-md:w-full max-md:ml-0 hover:scale-105" data-aos="fade-left" data-aos-delay="1000">
-<img class="aspect-[1.16] object-contain object-center w-3/4 overflow-hidden grow max-md:max-w-full max-md:mt-10" id="mas-info-img1" loading="lazy" src="mas_info_img1.webp">
-</img></div>
+<img class="aspect-[1.16] object-contain object-center w-3/4 overflow-hidden grow max-md:max-w-full max-md:mt-10" id="mas-info-img1" loading="lazy" src="mas_info_img1.webp"/>
+</div>
 </div>
 </div>
 <!-- Subsección 2 -->
@@ -1011,27 +928,27 @@
 <div class="flex flex-col items-stretch max-md:w-full max-md:ml-0">
 <div class="items-start flex flex-col max-md:max-w-full">
 <!-- Titulo de subsección -->
-<div class="self-stretch text-gray-900 text-3xl font-semibold leading-10 max-md:max-w-full text-center md:text-left" data-aos="fade-down" data-aos-delay="0" id="sub-titulo-mas-info-2">Dedicación al Cliente</div>
+<div class="self-stretch text-gray-900 text-3xl font-semibold leading-10 max-md:max-w-full text-center md:text-left" data-aos="fade-down" data-aos-delay="0" id="sub-titulo-mas-info-2">Compromiso con el Cliente</div>
 <!-- Subtitulo de subsección -->
-<div class="self-stretch text-gray-500 text-lg leading-7 mt-4 max-md:max-w-full" data-aos="fade-down" data-aos-delay="1000" id="sub-parrafo-mas-info-2">Nos enfocamos en superar las expectativas, proporcionando productos que realmente marcan la diferencia en el rendimiento agrícola.</div>
+<div class="self-stretch text-gray-500 text-lg leading-7 mt-4 max-md:max-w-full" data-aos="fade-down" data-aos-delay="1000" id="sub-parrafo-mas-info-2">Nuestro objetivo es exceder las expectativas de nuestros clientes, ofreciendo productos y servicios que aporten un valor agregado real.</div>
 <!-- Bullets -->
 <div class="items-stretch self-stretch flex flex-col mt-8 pl-4 max-md:max-w-full">
 <div class="items-stretch flex justify-between gap-3 max-md:max-w-full" data-aos="fade-down" data-aos-delay="1300">
 <img class="aspect-square object-contain object-center w-7 fill-purple-100 overflow-hidden shrink-0 max-w-full" loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/daf93b8072e4e929162239b52dc8b12696d3f1e0911f1e574f372c99b5cb9f53?apiKey=6b5c83656f3e4a62a08161b0635627a3&amp;"/>
 <div class="text-gray-700 text-md md:text-lg leading-7 grow shrink basis-auto max-md:max-w-full">
-<span class="font-extrabold" id="sub2-bold-1-mas-info">Excelencia y Valor</span> <span id="sub2-normal-1-mas-info">en cada producto que ofrecemos.</span>
+<span class="font-extrabold" id="sub2-bold-1-mas-info">Calidad a Precio Justo</span> <span id="sub2-normal-1-mas-info">Es nuestra promesa y compromiso.</span>
 </div>
 </div>
 <div class="items-stretch flex justify-between gap-3 mt-5 max-md:max-w-full" data-aos="fade-down" data-aos-delay="1600">
 <img class="aspect-square object-contain object-center w-7 fill-purple-100 overflow-hidden shrink-0 max-w-full" loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/daf93b8072e4e929162239b52dc8b12696d3f1e0911f1e574f372c99b5cb9f53?apiKey=6b5c83656f3e4a62a08161b0635627a3&amp;"/>
 <div class="text-gray-700 text-md md:text-lg leading-7 grow shrink basis-auto max-md:max-w-full">
-<span class="font-extrabold" id="sub2-bold-2-mas-info">Soporte Integral</span> <span id="sub2-normal-2-mas-info">acompañamiento completo antes y después de la compra.</span>
+<span class="font-extrabold" id="sub2-bold-2-mas-info">Servicio Postventa</span> <span id="sub2-normal-2-mas-info">Garantizamos un óptimo soporte tras la compra.</span>
 </div>
 </div>
 <div class="items-stretch flex justify-between gap-3 mt-5 max-md:max-w-full" data-aos="fade-down" data-aos-delay="1900">
 <img class="aspect-square object-contain object-center w-7 fill-purple-100 overflow-hidden shrink-0 max-w-full" loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/daf93b8072e4e929162239b52dc8b12696d3f1e0911f1e574f372c99b5cb9f53?apiKey=6b5c83656f3e4a62a08161b0635627a3&amp;"/>
 <div class="text-gray-700 text-md md:text-lg leading-7 grow shrink basis-auto max-md:max-w-full">
-<span class="font-extrabold" id="sub2-bold-3-mas-info">Amplio Catálogo</span> <span id="sub2-normal-3-mas-info">de accesorios y sistemas para todas tus necesidades agrícolas.</span>
+<span class="font-extrabold" id="sub2-bold-3-mas-info">Venta y Distribución</span> <span id="sub2-normal-3-mas-info">De equipos y materiales de alta calidad.</span>
 </div>
 </div>
 </div>
@@ -1046,27 +963,27 @@
 <div class="flex flex-col items-stretch w-[49%] max-md:w-full max-md:ml-0">
 <div class="items-start flex flex-col max-md:max-w-full">
 <!-- Titulo de subsección -->
-<div class="self-stretch text-gray-900 text-3xl font-semibold leading-10 max-md:max-w-full text-center md:text-left" data-aos="fade-down" data-aos-delay="0" id="sub-titulo-mas-info-3">Futuro y Reconocimiento</div>
+<div class="self-stretch text-gray-900 text-3xl font-semibold leading-10 max-md:max-w-full text-center md:text-left" data-aos="fade-down" data-aos-delay="0" id="sub-titulo-mas-info-3">Visión y Reconocimiento</div>
 <!-- Subtitulo de subsección -->
-<div class="self-stretch text-gray-500 text-lg leading-7 mt-4 max-md:max-w-full" data-aos="fade-down" data-aos-delay="1000" id="sub-parrafo-mas-info-3">Con una visión puesta en ser líderes en soluciones agrícolas innovadoras, continuamos elevando los estándares de calidad en el sector.</div>
+<div class="self-stretch text-gray-500 text-lg leading-7 mt-4 max-md:max-w-full" data-aos="fade-down" data-aos-delay="1000" id="sub-parrafo-mas-info-3">Miramos hacia el futuro con el objetivo de ser líderes en el sector, manteniendo los más altos estándares y contribuyendo al crecimiento económico del país.</div>
 <!-- Bullets -->
 <div class="items-stretch self-stretch flex flex-col mt-8 pl-4 max-md:max-w-full">
 <div class="items-stretch flex justify-between gap-3 max-md:max-w-full" data-aos="fade-down" data-aos-delay="1300">
 <img class="aspect-square object-contain object-center w-7 fill-purple-100 overflow-hidden shrink-0 max-w-full" loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/daf93b8072e4e929162239b52dc8b12696d3f1e0911f1e574f372c99b5cb9f53?apiKey=6b5c83656f3e4a62a08161b0635627a3&amp;"/>
 <div class="text-gray-700 text-md md:text-lg leading-7 grow shrink basis-auto max-md:max-w-full">
-<span class="font-extrabold" id="sub3-bold-1-mas-info">Innovación y Liderazgo</span> <span id="sub3-normal-1-mas-info">en el desarrollo de soluciones para invernaderos.</span>
+<span class="font-extrabold" id="sub3-bold-1-mas-info">Líderes en Innovación</span> <span id="sub3-normal-1-mas-info">Modelos de invernadero avanzados y personalizados.</span>
 </div>
 </div>
 <div class="items-stretch flex justify-between gap-3 mt-5 max-md:max-w-full" data-aos="fade-down" data-aos-delay="1600">
 <img class="aspect-square object-contain object-center w-7 fill-purple-100 overflow-hidden shrink-0 max-w-full" loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/daf93b8072e4e929162239b52dc8b12696d3f1e0911f1e574f372c99b5cb9f53?apiKey=6b5c83656f3e4a62a08161b0635627a3&amp;"/>
 <div class="text-gray-700 text-md md:text-lg leading-7 grow shrink basis-auto max-md:max-w-full">
-<span class="font-extrabold" id="sub3-bold-2-mas-info">Impacto en la Agricultura</span> <span id="sub3-normal-2-mas-info">aportando al crecimiento económico del sector.</span>
+<span class="font-extrabold" id="sub3-bold-2-mas-info">Crecimiento Económico</span> <span id="sub3-normal-2-mas-info">Contribución significativa al sector agrícola mexicano.</span>
 </div>
 </div>
 <div class="items-stretch flex justify-between gap-3 mt-5 max-md:max-w-full" data-aos="fade-down" data-aos-delay="1900">
 <img class="aspect-square object-contain object-center w-7 fill-purple-100 overflow-hidden shrink-0 max-w-full" loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/daf93b8072e4e929162239b52dc8b12696d3f1e0911f1e574f372c99b5cb9f53?apiKey=6b5c83656f3e4a62a08161b0635627a3&amp;"/>
 <div class="text-gray-700 text-md md:text-lg leading-7 grow shrink basis-auto max-md:max-w-full">
-<span class="font-extrabold" id="sub3-bold-3-mas-info">Estándares de Excelencia</span> <span id="sub3-normal-3-mas-info">manteniendo un equipo de expertos dedicados a la calidad.</span>
+<span class="font-extrabold" id="sub3-bold-3-mas-info">Altos Estándares de Calidad</span> <span id="sub3-normal-3-mas-info">Un equipo altamente calificado garantiza la excelencia.</span>
 </div>
 </div>
 </div>
@@ -1135,7 +1052,59 @@
 </div>
 </section>
 <!-- Imagen Separador -->
+<section class="bg-white relative" id="imagen-separador-1" style="height: 500px;">
+<div class="absolute inset-0 bg-cover bg-center" id="separador-1" style="background-image: url('separadores_1.webp');"></div>
+</section>
+<!-- Sección 3 Tarjetas -->
 
+<!-- Sección Diferenciadores -->
+<section class="gradient-bg md:py-10" id="diferenciadores">
+<div class="container mx-auto px-4 py-10 md:py-20 text-gray-700">
+<h1 class="text-4xl md:text-6xl md:pb-10 font-medium text-center text-gray-800 capitalize drop-shadow-xl" data-aos="fade-up" data-aos-offset="-50" id="firts_section_title">Nuestro Compromiso Único en Aristeel</h1>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="flex justify-center pt-5 mx-2 md:mx-10">
+<!-- <div class="h-50 w-full" data-aos="fade-up" data-aos-delay="200">
+						<div autoplay="" class="card-full-bleed hover:scale-105 rounded-lg" loop="" muted="">
+							<div id="video-diferenciadores"></div>
+						</div>
+					</div> -->
+<div class="flex justify-center" data-aos="fade-up" data-aos-delay="1400">
+<!-- <img src="https://media-public.canva.com/MADQ43cICJk/1/screen.jpg" alt="Diferenciadores" class="w-3/4 h-auto object-cover rounded-lg"> -->
+<img alt="Diferenciadores" class="w-full md:w-full h-auto object-contain rounded-lg" id="diferenciadores-image" loading="lazy" src="diferenciadores.webp"/>
+</div>
+</div>
+<!-- Diferenciadores en bullets -->
+<div class="md:mt-20 md:mt-0 content-center">
+<ul class="space-y-4" id="diferenciadores-list">
+
+<li class="flex items-start" data-aos="fade-right" data-aos-delay="600" data-aos-offset="-80">
+<i class="fas fa-check-circle mr-4 text-3xl"></i>
+<div>
+<h3 class="text-xl font-semibold mb-2">Experiencia y Confianza</h3>
+<p>Con más de 20 años en el mercado y más de 3 millones de metros cuadrados construidos, nuestra trayectoria habla por sí misma. Comprometidos con la excelencia, nuestros proyectos son sinónimo de calidad y fiabilidad.</p>
+</div>
+</li>
+
+<li class="flex items-start" data-aos="fade-right" data-aos-delay="750" data-aos-offset="-80">
+<i class="fas fa-check-circle mr-4 text-3xl"></i>
+<div>
+<h3 class="text-xl font-semibold mb-2">Calidad Superior</h3>
+<p>Nuestro enfoque en la calidad de los materiales y la precisión en la construcción asegura que cada proyecto sea duradero, eficiente y cumpla con las más altas expectativas.</p>
+</div>
+</li>
+
+<li class="flex items-start" data-aos="fade-right" data-aos-delay="900" data-aos-offset="-80">
+<i class="fas fa-check-circle mr-4 text-3xl"></i>
+<div>
+<h3 class="text-xl font-semibold mb-2">Innovación Continua</h3>
+<p>Estamos constantemente buscando y aplicando las últimas tecnologías y métodos constructivos para ofrecer a nuestros clientes las soluciones más avanzadas y efectivas.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
 <!-- Sección Testimonios -->
 
 <!-- Sección Logos -->
