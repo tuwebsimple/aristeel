@@ -36,7 +36,7 @@
 		window.addEventListener('DOMContentLoaded', () => {
 			const heroBackground1 = document.getElementById('hero-background-1');
 			const heroBackground2 = document.getElementById('hero-background-2');
-			const images = ["hero1.webp", "hero2.webp", "hero3.webp", "hero4.webp"];
+			const images = ["Imagenes/hero1.webp", "Imagenes/hero2.webp", "Imagenes/hero3.webp", "Imagenes/hero4.webp"];
 
 			// Iniciar el carrusel solo si la ventana es mayor que 768px
 			changeBackgroundImage(heroBackground1, heroBackground2, images, 0);
@@ -665,11 +665,11 @@
 
 		@media only screen and (max-width: 600px) {
 			#imagen-fondo-productos {
-				content: url('fondo_productos_celular.webp');
+				content: url('Imagenes/fondo_productos_celular.webp');
 			}
 
 			#imagen-fondo-acerca-de {
-				content: url('acerca_de_fondo_celular.webp');
+				content: url('Imagenes/acerca_de_fondo_celular.webp');
 			}
 		}
 
@@ -707,7 +707,7 @@
 <div class="py-0 front-elements">
 <div class="flex justify-center">
 <div class="mt-10 md:mt--2 flex justify-center items-center bg-white rounded drop-shadow-xl h-full w-full h-full md:w-3/4 bg-opacity-0" data-aos="fade-down" id="card-logo">
-<img alt="logo" class="aos-init aos-animate w-full h-full md:w-3/4" data-aos="fade-up" fetchpriority="high" id="logo-image" src="logo.webp"/>
+<img alt="logo" class="aos-init aos-animate w-full h-full md:w-3/4" data-aos="fade-up" fetchpriority="high" id="logo-image" src="Imagenes/logo.webp"/>
 </div>
 </div>
 <h1 class="text-5xl md:text-8xl text-center font-bold drop-shadow-xl" data-aos="fade-up" id="nombre-empresa"></h1>
@@ -733,10 +733,10 @@
 <section class="bg-white py-10">
 <div class="max-w-6xl px-6 py-10 mx-auto">
 <main class="relative z-20 w-full md:flex md:items-center xl:my-12">
-<div class="absolute w-full h-full md:h-full md:p-5 bg-gradient-to-r from-gray-700 to-gray-600 -z-10 rounded-2xl shadow-lg" id="color-descripcion"></div>
+<div class="absolute w-full h-full md:h-full md:p-5 bg-gradient-to-r from-gray-700 to-gray-600 -z-10 rounded-2xl shadow-lg" data-aos="fade-down" id="color-descripcion"></div>
 <div class="w-full p-6 md:flex md:items-center rounded-2xl md:p-0 md:justify-evenly">
 <!-- IMAGEN DESCRIPCION -->
-<img class="absolute md:relative md:w-1/2 rounded-2xl z-10 -top-12 -left-6 md:bottom-10 md:-left-12" data-aos="fade-up" data-aos-delay="1000" id="imagen-descripcion" src="descripcion.webp" style="max-width:115%"/>
+<img class="absolute md:relative md:w-1/2 rounded-2xl z-10 -top-12 -left-6 md:bottom-10 md:-left-12" data-aos="fade-up" data-aos-delay="1000" id="imagen-descripcion" src="Imagenes/descripcion.webp" style="max-width:115%"/>
 <!-- TEXTO DESCRIPCION -->
 <div class="mt-40 md:mt-6 md:w-1/2">
 <div>
@@ -753,7 +753,7 @@
 <!-- Seccion Oferta -->
 <section id="seccion-oferta">
 <div class="flex-col overflow-hidden relative flex min-h-[420px] items-center px-5">
-<img class="absolute z-[-1] h-full w-full object-cover object-center inset-0" id="imagen-oferta" loading="lazy" src="oferta_fondo.webp">
+<img class="absolute z-[-1] h-full w-full object-cover object-center inset-0" id="imagen-oferta" loading="lazy" src="Imagenes/oferta_fondo.webp">
 <section class="relative w-full max-w-[1280px] mt-28 mb-24 max-md:max-w-full max-md:my-10">
 <div class="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
 <article class="flex flex-col items-stretch max-md:w-full max-md:ml-0">
@@ -765,7 +765,7 @@
 </div>
 </article>
 <div class="flex flex-col items-end md:ml-5">
-<a class="text-zinc-800 text-md md:text-lg text-center font-bold leading-5 tracking-tight whitespace-nowrap bg-white relative items-center w-full m-auto px-5 py-4 rounded-3xl mt-5 md:mt-15 hover:bg-blue-500 hover:text-white" data-aos="fade-down" data-aos-delay="1000" href="#contacto" id="boton-oferta-1">Reclama tu Descuento Hoy</a>
+<a class="text-zinc-800 text-md md:text-lg text-center font-bold leading-5 tracking-tight whitespace-nowrap bg-white relative items-center w-full m-auto px-5 py-4 rounded-3xl mt-5 md:mt-15 hover:bg-blue-500 hover:text-white" data-aos="fade-down" data-aos-delay="1000" href="#contacto" id="boton-oferta-1">Aprovechar Oferta Ahora</a>
 <a class="text-white text-md md:text-lg text-center font-bold leading-5 tracking-tight whitespace-nowrap bg-white bg-opacity-10 relative items-center w-full m-auto py-4 p-5 rounded-3xl mt-5 md:mt-5 hover:bg-white hover:text-black" data-aos="fade-down" data-aos-delay="1200" href="#mas-info" id="boton-oferta-2">Ver Productos</a>
 </div>
 </div>
@@ -779,73 +779,145 @@
 <div class="bg-white">
 <div class="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-15 lg:max-w-7xl lg:px-8">
 <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8 xl:grid-cols-4">
-<a class="group" data-aos="fade-down" data-aos-delay="1200" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*Sistema de Anclaje para Invernaderos*">
+<a class="group" data-aos="fade-down" data-aos-delay="1200" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*PTR Galvanizado*">
 <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-<img alt="Sistema de Anclaje para Invernaderos" class="h-full w-full object-cover object-center group-hover:opacity-75" src="lista_productos_img1.webp"/>
+<img alt="PTR Galvanizado" class="h-full w-full object-cover object-center group-hover:opacity-75" src="Imagenes/lista_productos_img1.webp"/>
+</div>
+<h3 class="mt-4 text-lg font-extrabold text-gray-900">PTR Galvanizado</h3>
+<p class="mt-1 text-sm font-medium text-gray-600">Ideal para estructuras de invernadero, este PTR galvanizado combina durabilidad y resistencia a la corrosión.</p>
+</a>
+
+<a class="group" data-aos="fade-down" data-aos-delay="1450" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*Capitel Cuadrado*">
+<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+<img alt="Capitel Cuadrado" class="h-full w-full object-cover object-center group-hover:opacity-75" src="Imagenes/lista_productos_img2.webp"/>
+</div>
+<h3 class="mt-4 text-lg font-extrabold text-gray-900">Capitel Cuadrado</h3>
+<p class="mt-1 text-sm font-medium text-gray-600">Optimizado para una rápida instalación en estructuras de acero, el capitel cuadrado asegura conexiones firmes y estables, esencial para la integridad estructural de invernaderos.</p>
+</a>
+
+<a class="group" data-aos="fade-down" data-aos-delay="1700" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*Capitel Redondo*">
+<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+<img alt="Capitel Redondo" class="h-full w-full object-cover object-center group-hover:opacity-75" src="Imagenes/lista_productos_img3.webp"/>
+</div>
+<h3 class="mt-4 text-lg font-extrabold text-gray-900">Capitel Redondo</h3>
+<p class="mt-1 text-sm font-medium text-gray-600">Este capitel redondo destaca por su acabado galvanizado, ofreciendo protección prolongada contra la corrosión.</p>
+</a>
+
+<a class="group" data-aos="fade-down" data-aos-delay="1950" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*Capitel Español*">
+<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+<img alt="Capitel Español" class="h-full w-full object-cover object-center group-hover:opacity-75" src="Imagenes/lista_productos_img4.webp"/>
+</div>
+<h3 class="mt-4 text-lg font-extrabold text-gray-900">Capitel Español</h3>
+<p class="mt-1 text-sm font-medium text-gray-600">Componente de acero galvanizado esencial para unir arcos y pilares en invernaderos, asegurando estabilidad estructural.</p>
+</a>
+
+<a class="group" data-aos="fade-down" data-aos-delay="2200" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*Tornilleria*">
+<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+<img alt="Tornilleria" class="h-full w-full object-cover object-center group-hover:opacity-75" src="Imagenes/lista_productos_img5.webp"/>
+</div>
+<h3 class="mt-4 text-lg font-extrabold text-gray-900">Tornilleria</h3>
+<p class="mt-1 text-sm font-medium text-gray-600">Variedad de tornillos, tuercas y arandelas resistentes a la corrosión para ensamblar estructuras de invernaderos.</p>
+</a>
+
+<a class="group" data-aos="fade-down" data-aos-delay="2450" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*Abrazaderas Redondas*">
+<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+<img alt="Abrazaderas Redondas" class="h-full w-full object-cover object-center group-hover:opacity-75" src="Imagenes/lista_productos_img6.webp"/>
+</div>
+<h3 class="mt-4 text-lg font-extrabold text-gray-900">Abrazaderas Redondas</h3>
+<p class="mt-1 text-sm font-medium text-gray-600">Utilizadas para fijar tubos redondos, garantizan la seguridad y estabilidad de componentes en invernaderos.</p>
+</a>
+
+<a class="group" data-aos="fade-down" data-aos-delay="2700" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*Abrazaderas Cuadradas*">
+<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+<img alt="Abrazaderas Cuadradas" class="h-full w-full object-cover object-center group-hover:opacity-75" src="Imagenes/lista_productos_img7.webp"/>
+</div>
+<h3 class="mt-4 text-lg font-extrabold text-gray-900">Abrazaderas Cuadradas</h3>
+<p class="mt-1 text-sm font-medium text-gray-600">Para sujetar tubos cuadrados, esenciales en la construcción de invernaderos, ofrecen robustez y alineación.</p>
+</a>
+
+<a class="group" data-aos="fade-down" data-aos-delay="2950" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*Perfil de Acero Galvanizado*">
+<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+<img alt="Perfil de Acero Galvanizado" class="h-full w-full object-cover object-center group-hover:opacity-75" src="Imagenes/lista_productos_img8.webp"/>
+</div>
+<h3 class="mt-4 text-lg font-extrabold text-gray-900">Perfil de Acero Galvanizado</h3>
+<p class="mt-1 text-sm font-medium text-gray-600">Base estructural versátil y resistente contra la corrosión para invernaderos, disponible en diversas formas y tamaños.</p>
+</a>
+
+<a class="group" data-aos="fade-down" data-aos-delay="3200" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*Cinta de Riego*">
+<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+<img alt="Cinta de Riego" class="h-full w-full object-cover object-center group-hover:opacity-75" src="Imagenes/lista_productos_img9.webp"/>
+</div>
+<h3 class="mt-4 text-lg font-extrabold text-gray-900">Cinta de Riego</h3>
+<p class="mt-1 text-sm font-medium text-gray-600">Sistema de irrigación por goteo eficiente para la distribución uniforme de agua, optimizando el consumo y la producción.</p>
+</a>
+
+<a class="group" data-aos="fade-down" data-aos-delay="3450" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*Sistema de Anclaje para Invernaderos*">
+<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+<img alt="Sistema de Anclaje para Invernaderos" class="h-full w-full object-cover object-center group-hover:opacity-75" src="Imagenes/lista_productos_img10.webp"/>
 </div>
 <h3 class="mt-4 text-lg font-extrabold text-gray-900">Sistema de Anclaje para Invernaderos</h3>
 <p class="mt-1 text-sm font-medium text-gray-600">Anclajes de precisión para invernaderos, diseñados para garantizar estabilidad y resistencia frente a vientos fuertes y condiciones adversas.</p>
 </a>
 
-<a class="group" data-aos="fade-down" data-aos-delay="1450" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*Conectores de Acero Ajustables*">
+<a class="group" data-aos="fade-down" data-aos-delay="3700" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*Conectores de Acero Ajustables*">
 <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-<img alt="Conectores de Acero Ajustables" class="h-full w-full object-cover object-center group-hover:opacity-75" src="lista_productos_img2.webp"/>
+<img alt="Conectores de Acero Ajustables" class="h-full w-full object-cover object-center group-hover:opacity-75" src="Imagenes/lista_productos_img11.webp"/>
 </div>
 <h3 class="mt-4 text-lg font-extrabold text-gray-900">Conectores de Acero Ajustables</h3>
 <p class="mt-1 text-sm font-medium text-gray-600">Facilita la construcción y el ensamblaje de invernaderos con conectores de acero ajustables, proporcionando solidez y flexibilidad estructural.</p>
 </a>
 
-<a class="group" data-aos="fade-down" data-aos-delay="1700" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*Piezas Metálicas para Montaje*">
+<a class="group" data-aos="fade-down" data-aos-delay="3950" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*Piezas Metálicas para Montaje*">
 <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-<img alt="Piezas Metálicas para Montaje" class="h-full w-full object-cover object-center group-hover:opacity-75" src="lista_productos_img3.webp"/>
+<img alt="Piezas Metálicas para Montaje" class="h-full w-full object-cover object-center group-hover:opacity-75" src="Imagenes/lista_productos_img12.webp"/>
 </div>
 <h3 class="mt-4 text-lg font-extrabold text-gray-900">Piezas Metálicas para Montaje</h3>
 <p class="mt-1 text-sm font-medium text-gray-600">Componentes metálicos de alta calidad para el montaje de estructuras agrícolas, ofreciendo seguridad y durabilidad en cada conexión.</p>
 </a>
 
-<a class="group" data-aos="fade-down" data-aos-delay="1950" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*Perfiles de Aluminio para Invernadero*">
+<a class="group" data-aos="fade-down" data-aos-delay="4200" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*Perfiles de Aluminio para Invernadero*">
 <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-<img alt="Perfiles de Aluminio para Invernadero" class="h-full w-full object-cover object-center group-hover:opacity-75" src="lista_productos_img4.webp"/>
+<img alt="Perfiles de Aluminio para Invernadero" class="h-full w-full object-cover object-center group-hover:opacity-75" src="Imagenes/lista_productos_img13.webp"/>
 </div>
 <h3 class="mt-4 text-lg font-extrabold text-gray-900">Perfiles de Aluminio para Invernadero</h3>
 <p class="mt-1 text-sm font-medium text-gray-600">Perfiles de aluminio personalizados para el ensamblaje rápido y eficiente de invernaderos, combinando ligereza con resistencia extrema.</p>
 </a>
 
-<a class="group" data-aos="fade-down" data-aos-delay="2200" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*Accesorios de Acero Inoxidable*">
+<a class="group" data-aos="fade-down" data-aos-delay="4450" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*Accesorios de Acero Inoxidable*">
 <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-<img alt="Accesorios de Acero Inoxidable" class="h-full w-full object-cover object-center group-hover:opacity-75" src="lista_productos_img5.webp"/>
+<img alt="Accesorios de Acero Inoxidable" class="h-full w-full object-cover object-center group-hover:opacity-75" src="Imagenes/lista_productos_img14.webp"/>
 </div>
 <h3 class="mt-4 text-lg font-extrabold text-gray-900">Accesorios de Acero Inoxidable</h3>
 <p class="mt-1 text-sm font-medium text-gray-600">Optimiza tu invernadero con accesorios de acero inoxidable, resistentes a la corrosión y diseñados para un rendimiento duradero en ambientes húmedos.</p>
 </a>
 
-<a class="group" data-aos="fade-down" data-aos-delay="2450" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*Invernaderos de Polietileno de Larga Duración*">
+<a class="group" data-aos="fade-down" data-aos-delay="4700" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*Invernaderos de Polietileno de Larga Duración*">
 <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-<img alt="Invernaderos de Polietileno de Larga Duración" class="h-full w-full object-cover object-center group-hover:opacity-75" src="lista_productos_img6.webp"/>
+<img alt="Invernaderos de Polietileno de Larga Duración" class="h-full w-full object-cover object-center group-hover:opacity-75" src="Imagenes/lista_productos_img15.webp"/>
 </div>
 <h3 class="mt-4 text-lg font-extrabold text-gray-900">Invernaderos de Polietileno de Larga Duración</h3>
 <p class="mt-1 text-sm font-medium text-gray-600">Invernaderos robustos diseñados para maximizar la producción todo el año, con material de polietileno duradero y resistente al clima.</p>
 </a>
 
-<a class="group" data-aos="fade-down" data-aos-delay="2700" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*Cubiertas Reforzadas para Invernadero*">
+<a class="group" data-aos="fade-down" data-aos-delay="4950" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*Cubiertas Reforzadas para Invernadero*">
 <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-<img alt="Cubiertas Reforzadas para Invernadero" class="h-full w-full object-cover object-center group-hover:opacity-75" src="lista_productos_img7.webp"/>
+<img alt="Cubiertas Reforzadas para Invernadero" class="h-full w-full object-cover object-center group-hover:opacity-75" src="Imagenes/lista_productos_img16.webp"/>
 </div>
 <h3 class="mt-4 text-lg font-extrabold text-gray-900">Cubiertas Reforzadas para Invernadero</h3>
 <p class="mt-1 text-sm font-medium text-gray-600">Protege tus cultivos con cubiertas reforzadas de alta tecnología, ofreciendo máxima transparencia y resistencia a los elementos.</p>
 </a>
 
-<a class="group" data-aos="fade-down" data-aos-delay="2950" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*Estructuras Metálicas para Invernaderos*">
+<a class="group" data-aos="fade-down" data-aos-delay="5200" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*Estructuras Metálicas para Invernaderos*">
 <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-<img alt="Estructuras Metálicas para Invernaderos" class="h-full w-full object-cover object-center group-hover:opacity-75" src="lista_productos_img8.webp"/>
+<img alt="Estructuras Metálicas para Invernaderos" class="h-full w-full object-cover object-center group-hover:opacity-75" src="Imagenes/lista_productos_img17.webp"/>
 </div>
 <h3 class="mt-4 text-lg font-extrabold text-gray-900">Estructuras Metálicas para Invernaderos</h3>
 <p class="mt-1 text-sm font-medium text-gray-600">Construye la base de tu producción agrícola con estructuras metálicas galvanizadas, diseñadas para una instalación eficiente y una larga vida útil.</p>
 </a>
 
-<a class="group" data-aos="fade-down" data-aos-delay="3200" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*Invernaderos Ventilados de Alto Rendimiento*">
+<a class="group" data-aos="fade-down" data-aos-delay="5450" data-aos-offset="-50" href="https://wa.me/5217223943105?text=Hola!%20Me%20interesa%20hacer%20una%20cotización%20del%20producto%20que%20vi%20en%20su%20página%20web%20*Invernaderos Ventilados de Alto Rendimiento*">
 <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-<img alt="Invernaderos Ventilados de Alto Rendimiento" class="h-full w-full object-cover object-center group-hover:opacity-75" src="lista_productos_img9.webp"/>
+<img alt="Invernaderos Ventilados de Alto Rendimiento" class="h-full w-full object-cover object-center group-hover:opacity-75" src="Imagenes/lista_productos_img18.webp"/>
 </div>
 <h3 class="mt-4 text-lg font-extrabold text-gray-900">Invernaderos Ventilados de Alto Rendimiento</h3>
 <p class="mt-1 text-sm font-medium text-gray-600">Asegura una ventilación óptima y control de temperatura con invernaderos especializados, ideales para cultivos que requieren condiciones específicas.</p>
@@ -861,7 +933,7 @@
 
 <!-- Sección CTA -->
 <section class="mb-32">
-<div class="cta-background relative z-0 py-20 overflow-hidden bg-no-repeat bg-cover bg-center aos-init order-last" id="cta-imagen" style="background-image:url(cta.webp); height: 500px; background-position: center;">
+<div class="cta-background relative z-0 py-20 overflow-hidden bg-no-repeat bg-cover bg-center aos-init order-last" id="cta-imagen" style="background-image:url(Imagenes/cta.webp); height: 500px; background-position: center;">
 </div>
 <div class="relative z-30 container mx-auto px-6 md:px-10 md:pt-10 order-first">
 <div class="text-center text-gray-800">
@@ -911,7 +983,7 @@
 </div>
 <!-- Imagen a la derecha -->
 <div class="flex flex-col items-center w-[45%] ml-5 max-md:w-full max-md:ml-0 hover:scale-105" data-aos="fade-left" data-aos-delay="1000">
-<img class="aspect-[1.16] object-contain object-center w-3/4 overflow-hidden grow max-md:max-w-full max-md:mt-10" id="mas-info-img1" loading="lazy" src="mas_info_img1.webp"/>
+<img class="aspect-[1.16] object-contain object-center w-3/4 overflow-hidden grow max-md:max-w-full max-md:mt-10" id="mas-info-img1" loading="lazy" src="Imagenes/mas_info_img1.webp"/>
 </div>
 </div>
 </div>
@@ -920,7 +992,7 @@
 <div class="flex flex-col-reverse md:flex-row gap-5 max-md:items-stretch max-md:gap-0">
 <!-- Imagen a la izquierda para escritorio, abajo para móvil -->
 <div class="flex flex-col items-center w-[45%] mr-5 max-md:w-full max-md:mr-0 hover:scale-105" data-aos="fade-right" data-aos-delay="1000">
-<img class="aspect-[1.16] object-contain object-center w-3/4 overflow-hidden grow max-md:max-w-full max-md:mt-10" id="mas-info-img2" loading="lazy" src="mas_info_img2.webp"/>
+<img class="aspect-[1.16] object-contain object-center w-3/4 overflow-hidden grow max-md:max-w-full max-md:mt-10" id="mas-info-img2" loading="lazy" src="Imagenes/mas_info_img2.webp"/>
 </div>
 <!-- Texto -->
 <div class="flex flex-col items-stretch w-[49%] max-md:w-full max-md:ml-0">
@@ -991,7 +1063,7 @@
 </div>
 <!-- Imagen a la derecha -->
 <div class="flex flex-col items-center w-[45%] ml-5 max-md:w-full max-md:ml-0 hover:scale-105" data-aos="fade-left" data-aos-delay="1000">
-<img class="aspect-[1.16] object-contain object-center w-3/4 overflow-hidden grow max-md:max-w-full max-md:mt-10" id="mas-info-img3" loading="lazy" src="mas_info_img3.webp"/>
+<img class="aspect-[1.16] object-contain object-center w-3/4 overflow-hidden grow max-md:max-w-full max-md:mt-10" id="mas-info-img3" loading="lazy" src="Imagenes/mas_info_img3.webp"/>
 </div>
 </div>
 </div>
@@ -1053,7 +1125,7 @@
 </section>
 <!-- Imagen Separador -->
 <section class="bg-white relative" id="imagen-separador-1" style="height: 500px;">
-<div class="absolute inset-0 bg-cover bg-center" id="separador-1" style="background-image: url('separadores_1.webp');"></div>
+<div class="absolute inset-0 bg-cover bg-center" id="separador-1" style="background-image: url('Imagenes/separadores_1.webp');"></div>
 </section>
 <!-- Sección 3 Tarjetas -->
 
@@ -1070,7 +1142,7 @@
 					</div> -->
 <div class="flex justify-center" data-aos="fade-up" data-aos-delay="1400">
 <!-- <img src="https://media-public.canva.com/MADQ43cICJk/1/screen.jpg" alt="Diferenciadores" class="w-3/4 h-auto object-cover rounded-lg"> -->
-<img alt="Diferenciadores" class="w-full md:w-full h-auto object-contain rounded-lg" id="diferenciadores-image" loading="lazy" src="diferenciadores.webp"/>
+<img alt="Diferenciadores" class="w-full md:w-full h-auto object-contain rounded-lg" id="diferenciadores-image" loading="lazy" src="Imagenes/diferenciadores.webp"/>
 </div>
 </div>
 <!-- Diferenciadores en bullets -->
@@ -1114,7 +1186,7 @@
 <!-- Sección Acerca de nosotros -->
 <section class="relative bg-gray-50 py-20" id="acerca-de">
 <div class="absolute inset-1">
-<img class="object-cover h-full w-full z-0" id="imagen-fondo-acerca-de" src="acerca_de_fondo_escritorio.webp">
+<img class="object-cover h-full w-full z-0" id="imagen-fondo-acerca-de" src="Imagenes/acerca_de_fondo_escritorio.webp">
 </img></div>
 <h1 class="text-3xl md:text-6xl pb-10 font-extrabold text-center text-white capitalize drop-shadow-xl" data-aos="fade-down" data-aos-delay="0" id="titulo-acercade">Acerca de Aristeel</h1>
 <div class="container mx-auto px-4">
